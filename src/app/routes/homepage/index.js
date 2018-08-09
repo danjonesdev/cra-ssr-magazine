@@ -36,13 +36,23 @@ class Homepage extends Component {
     return list;
   }
 
+  serializers = {
+    types: {
+      code: props => (
+        <pre data-language={props.node.language}>
+          <code>{props.node.code}</code>
+        </pre>
+      )
+    }
+  }
+
   render() {
     const items = this.props.currentProfiles;
     console.log(items);
 
     if (items.length) {
       return (
-        <Page id="article" title="scu" description="xx" image="d">
+        <Page id="article" title="scu" description="xx" image="d" serializers={this.serializers}>
           {this.renderList(items)}
         </Page>
       );
