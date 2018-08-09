@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {frontloadConnect} from 'react-frontload';
+import BlockContent from '@sanity/block-content-to-react';
+
 import Page from '../../components/page';
 
 import {getCurrentProfiles, removeCurrentProfiles} from '../../../modules/articles';
@@ -27,8 +29,7 @@ class Homepage extends Component {
       list.push(
         <React.Fragment key={i}>
           <p>{items[i].title}</p>
-          <p>{items[i].title}</p>
-          <p>{items[i].title}</p>
+          <BlockContent blocks={items[i].body} serializers={this.serializers} />,
         </React.Fragment>
       );
     }

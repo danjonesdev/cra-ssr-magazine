@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@sanity/block-content-to-react": "^2.0.2",
     "@sanity/client": "^0.132.5",
     "@sanity/image-url": "^0.132.5",
     "connected-react-router": "^4.3.0",
