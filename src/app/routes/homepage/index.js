@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {frontloadConnect} from 'react-frontload';
-import BlockContent from '@sanity/block-content-to-react';
 
 import Page from '../../components/page';
 
@@ -22,16 +21,6 @@ class Homepage extends Component {
     return true;
   }
 
-  serializers = {
-    types: {
-      code: props => (
-        <pre data-language={props.node.language}>
-          <code>{props.node.code}</code>
-        </pre>
-      )
-    }
-  }
-
   renderList = (items) => {
     let list = [];
 
@@ -39,7 +28,6 @@ class Homepage extends Component {
       list.push(
         <React.Fragment key={i}>
           <p>{items[i].title}</p>
-          <BlockContent blocks={items[i].body} serializers={this.serializers} />,
         </React.Fragment>
       );
     }
