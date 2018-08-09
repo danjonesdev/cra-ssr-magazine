@@ -36,7 +36,7 @@ class Homepage extends Component {
     return list;
   }
 
-  serializers = {
+  const serializers = {
     types: {
       code: props => (
         <pre data-language={props.node.language}>
@@ -52,7 +52,7 @@ class Homepage extends Component {
 
     if (items.length) {
       return (
-        <Page id="article" title="scu" description="xx" image="d" serializers={this.serializers}>
+        <Page id="article" title="scu" description="xx" image="d">
           {this.renderList(items)}
         </Page>
       );
