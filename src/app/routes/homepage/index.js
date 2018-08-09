@@ -22,6 +22,16 @@ class Homepage extends Component {
     return true;
   }
 
+  serializers = {
+    types: {
+      code: props => (
+        <pre data-language={props.node.language}>
+          <code>{props.node.code}</code>
+        </pre>
+      )
+    }
+  }
+
   renderList = (items) => {
     let list = [];
 
@@ -36,15 +46,6 @@ class Homepage extends Component {
     return list;
   }
 
-  const serializers = {
-    types: {
-      code: props => (
-        <pre data-language={props.node.language}>
-          <code>{props.node.code}</code>
-        </pre>
-      )
-    }
-  }
 
   render() {
     const items = this.props.currentProfiles;
