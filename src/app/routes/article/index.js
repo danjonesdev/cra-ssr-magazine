@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {frontloadConnect} from 'react-frontload';
 
 import Page from '../../components/page';
+import Para from '../../components/article/para';
 
 import {getCurrentProfile, removeCurrentProfile} from '../../../modules/article';
 
@@ -21,34 +22,33 @@ class Profile extends Component {
     return true;
   }
 
-  renderItem = (item) => {
-    return (
-      <React.Fragment>
-        <p>{item.title}</p>
-        <img src={item.mainImg} alt={item.title} />
-      </React.Fragment>
-    );
-  }
+  // renderItem = (item) => {
+  //   return (
+  //     <React.Fragment>
+  //       <p>{item.title}</p>
+  //       <img src={item.mainImg} alt={item.title} />
+  //     </React.Fragment>
+  //   );
+  // }
 
-  renderBody = (body) => {
-    console.log(body);
-
-    for (let i = 0; i < body.length; i++) {
-      if (body[i]._type === 'block' && !body[i].listItem) {
-        console.log('p tag');
-        continue;
-      }
-
-      if (body[i]._type === 'block' && body[i].listItem === 'bullet') {
-        console.log('bullet item');
-        continue;
-      }
-
-      if (body[i]._type === 'block' && body[i].listItem === 'number') {
-        console.log('number item');
-        continue;
-      }
+  renderBody = (item, i) => {
+    if (item._type === 'block' && !item.listItem) {
+      return (
+        <div key={i}>
+          <Para children={item.children} />
+        </div>
+      );
     }
+
+    // if (item[i]._type === 'block' && item[i].listItem === 'bullet') {
+    //   console.log('bullet item');
+    //   continue;
+    // }
+    //
+    // if (item[i]._type === 'block' && item[i].listItem === 'number') {
+    //   console.log('number item');
+    //   continue;
+    // }
   }
 
   render() {
@@ -57,7 +57,9 @@ class Profile extends Component {
     if (item._id) {
       return (
         <Page id="article" title={item.title} description="d" image="d">
-          {this.renderBody(item.body)}
+          {item.body.map((item, i) => (
+            this.renderBody(item, i)
+          ))}
         </Page>
       );
     }
