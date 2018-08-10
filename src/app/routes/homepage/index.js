@@ -37,7 +37,6 @@ class Homepage extends Component {
 
   render() {
     const items = this.props.currentProfiles;
-    console.log(items);
 
     if (items.length) {
       return (

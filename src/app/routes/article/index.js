@@ -30,14 +30,38 @@ class Profile extends Component {
     );
   }
 
+  renderBody = (body) => {
+    console.log(body);
+
+    for (let i = 0; i < body.length; i++) {
+      if (body[i]._type === 'block' && !body[i].listItem) {
+        console.log('p tag');
+        continue;
+      }
+
+      if (body[i]._type === 'block' && body[i].listItem === 'bullet') {
+        console.log('bullet item');
+        continue;
+      }
+
+      if (body[i]._type === 'block' && body[i].listItem === 'number') {
+        console.log('number item');
+        continue;
+      }
+    }
+  }
+
   render() {
     const item = this.props.currentProfile;
-    
-    return (
-      <Page id="article" title={item.title} description="d" image="d">
-        {this.renderItem(item)}
-      </Page>
-    );
+
+    if (item._id) {
+      return (
+        <Page id="article" title={item.title} description="d" image="d">
+          {this.renderBody(item.body)}
+        </Page>
+      );
+    }
+    return false;
   }
 }
 
