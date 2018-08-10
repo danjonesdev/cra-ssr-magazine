@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Number extends Component {
+class Bullet extends Component {
   renderChildren = (child, i) => {
     if (child.text) {
       if (child.marks) {
@@ -35,4 +35,4 @@ class Number extends Component {
   }
 }
 
-export default Number;
+export default Bullet;

@@ -6,6 +6,7 @@ import {frontloadConnect} from 'react-frontload';
 import Page from '../../components/page';
 import Para from '../../components/article/para';
 import Bullet from '../../components/article/bullet';
+import Number from '../../components/article/number';
 
 import {getCurrentProfile, removeCurrentProfile} from '../../../modules/article';
 
@@ -42,19 +43,20 @@ class Profile extends Component {
     }
 
     if (item._type === 'block' && item.listItem === 'bullet') {
-      console.log('bullet item');
-      console.log(item);
       return (
         <ul key={i}>
           <Bullet children={item.children} />
         </ul>
       );
     }
-    //
-    // if (item[i]._type === 'block' && item[i].listItem === 'number') {
-    //   console.log('number item');
-    //   continue;
-    // }
+
+    if (item._type === 'block' && item.listItem === 'number') {
+      return (
+        <ul key={i}>
+          <Number children={item.children} />
+        </ul>
+      );
+    }
   }
 
   render() {
