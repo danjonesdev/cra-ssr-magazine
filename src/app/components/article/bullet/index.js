@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 
-class Para extends Component {
+class Bullet extends Component {
   renderChildren = (child, i) => {
     if (child.text) {
       if (child.marks) {
 
         if (child.marks.includes('stong') && child.marks.includes('em')) {
-          return <p key={i} className="di"><strong><em>{child.text}</em></strong></p>
+          return <li key={i} className="di"><strong><em>{child.text}</em></strong></li>
         }
         if (child.marks.includes('strong')) {
-          return <p key={i} className="di"><strong>{child.text}</strong></p>
+          return <li key={i} className="di"><strong>{child.text}</strong></li>
         }
         if (child.marks.includes('em')) {
-          return <p key={i} className="di"><em>{child.text}</em></p>
+          return <li key={i} className="di"><em>{child.text}</em></li>
         }
       }
 
-      return <p key={i} className="di">{child.text}</p>
+      return <li key={i} className="di">{child.text}</li>
     }
 
     return false;
@@ -35,4 +35,4 @@ class Para extends Component {
   }
 }
 
-export default Para;
+export default Bullet;
