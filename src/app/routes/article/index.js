@@ -13,6 +13,15 @@ import {getCurrentProfile, removeCurrentProfile} from '../../../modules/article'
 const frontload = async props => await props.getCurrentProfile(props.match.params.id);
 
 class Profile extends Component {
+  constructor(props) {
+    super(props);
+    // Don't call this.setState() here!
+    this.state = {
+      bulletListOpen: false,
+      numberListOpen: false
+    };
+  }
+
   componentWillUnmount() {
     this.props.removeCurrentProfile();
   }
@@ -51,11 +60,21 @@ class Profile extends Component {
     }
 
     if (item._type === 'block' && item.listItem === 'number') {
-      return (
-        <ul key={i}>
+      if (!this.state.numberListOpen) {
+        // this.setState({ numberListOpen: true });
+        return (
+          <ul key={i}>
           <Number children={item.children} />
-        </ul>
-      );
+          </ul>
+        );
+      } else {
+        // this.setState({ numberListOpen: false });
+        return (
+          <ul key={i}>
+          <Number children={item.children} />
+          </ul>
+        );
+      }
     }
   }
 
