@@ -1,46 +1,63 @@
-#app {
-  text-align: right;
-}
+// Vendor
+@import 'styles/vendor/normalize';
+// @import 'styles/vendor/flickity';
 
-#header {
-  background-color: #222;
-  height: auto;
-  padding: 20px;
-  color: white;
-}
+// Variables
+@import 'styles/vars/index';
 
-#title {
-  margin-top: 0px;
-  font-size: 1.5em;
-}
+// Functions
+@import 'styles/functions/breakpoints';
+@import 'styles/functions/colors';
+@import 'styles/functions/easing';
 
-#links {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px;
-  display: flex;
-  justify-content: center;
-}
+// Mixins
+@import 'styles/mixins/box-shadow';
+@import 'styles/mixins/breakpoints';
+@import 'styles/mixins/placeholder';
 
-#links li.current a {
-  color: white;
-  font-weight: bold;
-}
+// Utilities
+@import 'styles/utilities/aspect-ratio';
+@import 'styles/utilities/background';
+@import 'styles/utilities/base';
+@import 'styles/utilities/border';
+@import 'styles/utilities/border-color';
+@import 'styles/utilities/border-radius';
+@import 'styles/utilities/border-width';
+@import 'styles/utilities/box-shadow';
+@import 'styles/utilities/clearfix';
+@import 'styles/utilities/color';
+@import 'styles/utilities/cursor';
+// @import 'styles/utilities/debug';
+@import 'styles/utilities/display';
+@import 'styles/utilities/flexbox';
+@import 'styles/utilities/font-familiy';
+@import 'styles/utilities/font-size';
+@import 'styles/utilities/font-style';
+@import 'styles/utilities/font-weight';
+@import 'styles/utilities/grid';
+@import 'styles/utilities/height';
+@import 'styles/utilities/helper';
+@import 'styles/utilities/hover';
+@import 'styles/utilities/line-height';
+@import 'styles/utilities/link';
+@import 'styles/utilities/max-width';
+@import 'styles/utilities/negative-margin';
+@import 'styles/utilities/opacity';
+@import 'styles/utilities/overflow';
+@import 'styles/utilities/position';
+@import 'styles/utilities/spacing';
+@import 'styles/utilities/state';
+@import 'styles/utilities/text-align';
+@import 'styles/utilities/text-decoration';
+@import 'styles/utilities/text-transform';
+@import 'styles/utilities/typography';
+@import 'styles/utilities/tracking';
+@import 'styles/utilities/vertical-align';
+@import 'styles/utilities/width';
+@import 'styles/utilities/z';
 
-#links li a {
-  padding: 10px;
-  color: lightGray;
-  text-decoration: none;
-}
+// Elements
+// @import 'styles/elements/*';
 
-#links li a:hover {
-  color: white;
-}
-
-#content {
-  margin-top: 20px;
-}
-
-.di {
-  display: inline;
-}
+// Modules
+// @import 'styles/modules/*';

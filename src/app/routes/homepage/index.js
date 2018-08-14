@@ -7,7 +7,7 @@ class Homepage extends Component {
   render() {
     return (
       <Page id="article" title="scu" description="xx" image="d">
-        <ArticlesLatest {...this.props} />
+        <ArticlesLatest {...this.props} padding="pv3" />
       </Page>
     );
   }

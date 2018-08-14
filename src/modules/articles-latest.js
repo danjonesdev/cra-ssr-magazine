@@ -36,6 +36,7 @@ export const getCurrentProfiles = id => dispatch => new Promise(resolve => {
     ...,
     author->,
     categories[]->,
+    "mainImage": mainImage.asset->url,
   }`;
 
   sanity.fetch(query).then(articlesLatest => {

@@ -24,7 +24,9 @@ class ArticlesLatest extends Component {
 
   render() {
     const items = this.props.currentProfiles;
-    if (items.length) return <ArticlesLatestComponent items={items} />;
+    const { padding } = this.props;
+
+    if (items.length) return <ArticlesLatestComponent items={items} padding={padding} />;
     return false;
   }
 }
