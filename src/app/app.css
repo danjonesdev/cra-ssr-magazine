@@ -7,6 +7,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Play:400,700");
 html {
   line-height: 1.15;
   /* 1 */
@@ -430,7 +431,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "Ubuntu", "Roboto", "Noto", "Segoe Ui", Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #111111;
   background-color: #fff;
   -webkit-font-smoothing: antialiased; }
 
@@ -482,32 +482,14 @@ svg {
 .bc-black {
   border-color: #000000; }
 
-.bc-almost-black {
-  border-color: #111111; }
-
 .bc-dark-grey {
   border-color: #333333; }
 
 .bc-mid-grey {
   border-color: #555555; }
 
-.bc-grey {
-  border-color: #777777; }
-
-.bc-silver {
-  border-color: #999999; }
-
-.bc-light-silver {
-  border-color: #aaaaaa; }
-
-.bc-moon-grey {
-  border-color: #cccccc; }
-
 .bc-light-grey {
-  border-color: #eeeeee; }
-
-.bc-almost-white {
-  border-color: #f5f5f5; }
+  border-color: #aaaaaa; }
 
 .bc-white {
   border-color: #ffffff; }
@@ -583,12 +565,6 @@ svg {
 .bg-black {
   background-color: #000000; }
 
-.almost-black {
-  color: #111111; }
-
-.bg-almost-black {
-  background-color: #111111; }
-
 .dark-grey {
   color: #333333; }
 
@@ -601,41 +577,11 @@ svg {
 .bg-mid-grey {
   background-color: #555555; }
 
-.grey {
-  color: #777777; }
-
-.bg-grey {
-  background-color: #777777; }
-
-.silver {
-  color: #999999; }
-
-.bg-silver {
-  background-color: #999999; }
-
-.light-silver {
+.light-grey {
   color: #aaaaaa; }
 
-.bg-light-silver {
-  background-color: #aaaaaa; }
-
-.moon-grey {
-  color: #cccccc; }
-
-.bg-moon-grey {
-  background-color: #cccccc; }
-
-.light-grey {
-  color: #eeeeee; }
-
 .bg-light-grey {
-  background-color: #eeeeee; }
-
-.almost-white {
-  color: #f5f5f5; }
-
-.bg-almost-white {
-  background-color: #f5f5f5; }
+  background-color: #aaaaaa; }
 
 .white {
   color: #ffffff; }
@@ -663,10 +609,6 @@ svg {
     color: #000000; }
   .bg-black-sm {
     background-color: #000000; }
-  .almost-black-sm {
-    color: #111111; }
-  .bg-almost-black-sm {
-    background-color: #111111; }
   .dark-grey-sm {
     color: #333333; }
   .bg-dark-grey-sm {
@@ -675,30 +617,10 @@ svg {
     color: #555555; }
   .bg-mid-grey-sm {
     background-color: #555555; }
-  .grey-sm {
-    color: #777777; }
-  .bg-grey-sm {
-    background-color: #777777; }
-  .silver-sm {
-    color: #999999; }
-  .bg-silver-sm {
-    background-color: #999999; }
-  .light-silver-sm {
-    color: #aaaaaa; }
-  .bg-light-silver-sm {
-    background-color: #aaaaaa; }
-  .moon-grey-sm {
-    color: #cccccc; }
-  .bg-moon-grey-sm {
-    background-color: #cccccc; }
   .light-grey-sm {
-    color: #eeeeee; }
+    color: #aaaaaa; }
   .bg-light-grey-sm {
-    background-color: #eeeeee; }
-  .almost-white-sm {
-    color: #f5f5f5; }
-  .bg-almost-white-sm {
-    background-color: #f5f5f5; }
+    background-color: #aaaaaa; }
   .white-sm {
     color: #ffffff; }
   .bg-white-sm {
@@ -719,10 +641,6 @@ svg {
     color: #000000; }
   .bg-black-md {
     background-color: #000000; }
-  .almost-black-md {
-    color: #111111; }
-  .bg-almost-black-md {
-    background-color: #111111; }
   .dark-grey-md {
     color: #333333; }
   .bg-dark-grey-md {
@@ -731,30 +649,10 @@ svg {
     color: #555555; }
   .bg-mid-grey-md {
     background-color: #555555; }
-  .grey-md {
-    color: #777777; }
-  .bg-grey-md {
-    background-color: #777777; }
-  .silver-md {
-    color: #999999; }
-  .bg-silver-md {
-    background-color: #999999; }
-  .light-silver-md {
-    color: #aaaaaa; }
-  .bg-light-silver-md {
-    background-color: #aaaaaa; }
-  .moon-grey-md {
-    color: #cccccc; }
-  .bg-moon-grey-md {
-    background-color: #cccccc; }
   .light-grey-md {
-    color: #eeeeee; }
+    color: #aaaaaa; }
   .bg-light-grey-md {
-    background-color: #eeeeee; }
-  .almost-white-md {
-    color: #f5f5f5; }
-  .bg-almost-white-md {
-    background-color: #f5f5f5; }
+    background-color: #aaaaaa; }
   .white-md {
     color: #ffffff; }
   .bg-white-md {
@@ -775,10 +673,6 @@ svg {
     color: #000000; }
   .bg-black-lg {
     background-color: #000000; }
-  .almost-black-lg {
-    color: #111111; }
-  .bg-almost-black-lg {
-    background-color: #111111; }
   .dark-grey-lg {
     color: #333333; }
   .bg-dark-grey-lg {
@@ -787,30 +681,10 @@ svg {
     color: #555555; }
   .bg-mid-grey-lg {
     background-color: #555555; }
-  .grey-lg {
-    color: #777777; }
-  .bg-grey-lg {
-    background-color: #777777; }
-  .silver-lg {
-    color: #999999; }
-  .bg-silver-lg {
-    background-color: #999999; }
-  .light-silver-lg {
-    color: #aaaaaa; }
-  .bg-light-silver-lg {
-    background-color: #aaaaaa; }
-  .moon-grey-lg {
-    color: #cccccc; }
-  .bg-moon-grey-lg {
-    background-color: #cccccc; }
   .light-grey-lg {
-    color: #eeeeee; }
+    color: #aaaaaa; }
   .bg-light-grey-lg {
-    background-color: #eeeeee; }
-  .almost-white-lg {
-    color: #f5f5f5; }
-  .bg-almost-white-lg {
-    background-color: #f5f5f5; }
+    background-color: #aaaaaa; }
   .white-lg {
     color: #ffffff; }
   .bg-white-lg {
@@ -1282,14 +1156,8 @@ svg {
 .system-sans {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "Ubuntu", "Roboto", "Noto", "Segoe Ui", Arial, sans-serif; }
 
-.sans {
-  font-family: sans-serif; }
-
-.serif {
-  font-family: serif; }
-
-.mono {
-  font-family: "Menlo", "Consolas", "Lucida Console", monospace; }
+.t-title {
+  font-family: "Play", sans-serif; }
 
 .f-headline {
   font-size: 6rem; }
@@ -1390,26 +1258,26 @@ svg {
   .fs-italic-lg {
     font-style: italic; } }
 
-.fw3 {
-  font-weight: 300; }
+.bold {
+  font-weight: bold; }
 
-.fw4 {
-  font-weight: 400; }
+.container,
+.container-large {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px; }
 
-.fw5 {
-  font-weight: 500; }
+@media screen and (min-width: 950px) {
+  .container,
+  .container-large {
+    padding-left: 30px;
+    padding-right: 30px; } }
 
-.fw6 {
-  font-weight: 600; }
+.container {
+  max-width: 1200px; }
 
-.fw7 {
-  font-weight: 700; }
-
-.fw8 {
-  font-weight: 800; }
-
-.fw9 {
-  font-weight: 900; }
+.container-large {
+  max-width: 1500px; }
 
 [class^="col"],
 [class*=" col"] {
@@ -1810,12 +1678,6 @@ svg {
 .bg-black-hover:hover {
   background-color: #000000; }
 
-.almost-black-hover:hover {
-  color: #111111; }
-
-.bg-almost-black-hover:hover {
-  background-color: #111111; }
-
 .dark-grey-hover:hover {
   color: #333333; }
 
@@ -1828,41 +1690,11 @@ svg {
 .bg-mid-grey-hover:hover {
   background-color: #555555; }
 
-.grey-hover:hover {
-  color: #777777; }
-
-.bg-grey-hover:hover {
-  background-color: #777777; }
-
-.silver-hover:hover {
-  color: #999999; }
-
-.bg-silver-hover:hover {
-  background-color: #999999; }
-
-.light-silver-hover:hover {
+.light-grey-hover:hover {
   color: #aaaaaa; }
 
-.bg-light-silver-hover:hover {
-  background-color: #aaaaaa; }
-
-.moon-grey-hover:hover {
-  color: #cccccc; }
-
-.bg-moon-grey-hover:hover {
-  background-color: #cccccc; }
-
-.light-grey-hover:hover {
-  color: #eeeeee; }
-
 .bg-light-grey-hover:hover {
-  background-color: #eeeeee; }
-
-.almost-white-hover:hover {
-  color: #f5f5f5; }
-
-.bg-almost-white-hover:hover {
-  background-color: #f5f5f5; }
+  background-color: #aaaaaa; }
 
 .white-hover:hover {
   color: #ffffff; }
