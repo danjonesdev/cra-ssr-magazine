@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LazyImg from '../../elements/lazy-image'
 
 class ArticlesLatestComponent extends Component {
   render() {
@@ -7,7 +8,10 @@ class ArticlesLatestComponent extends Component {
     return (
       <React.Fragment>
         {items.map((item, i) => (
-          <p>{item.title}</p>
+          <div>
+            <LazyImg src="http://via.placeholder.com/350x150"  alt="" />
+            <p>{item.title}</p>
+          </div>
         ))}
       </React.Fragment>
     );
