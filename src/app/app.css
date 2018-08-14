@@ -423,8 +423,8 @@ html {
   box-sizing: border-box; }
 
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: inherit; }
 
 body {
@@ -454,6 +454,14 @@ svg {
   display: block;
   max-width: 100%;
   height: auto; }
+
+address,
+cite,
+dfn,
+em,
+i,
+var {
+  font-style: normal; }
 
 .ba {
   border-style: solid;
@@ -1604,19 +1612,31 @@ svg {
     max-width: 100%; } }
 
 .h1 {
-  height: 1rem; }
-
-.h2 {
   height: 2rem; }
 
-.h3 {
+.h2 {
   height: 4rem; }
+
+.h3 {
+  height: 6rem; }
 
 .h4 {
   height: 8rem; }
 
 .h5 {
+  height: 10rem; }
+
+.h6 {
+  height: 12rem; }
+
+.h7 {
+  height: 14rem; }
+
+.h8 {
   height: 16rem; }
+
+.h9 {
+  height: 18rem; }
 
 .h-10 {
   height: 10%; }
@@ -3617,3 +3637,20 @@ svg {
 
 .z9 {
   z-index: 1090; }
+
+.fadeIn-zoomIn {
+  animation: zoomIn 0.6s ease both, fadeIn 0.4s ease both;
+  animation-delay: 0s;
+  animation-delay: 0s; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1.5); }
+  100% {
+    transform: scale(1); } }

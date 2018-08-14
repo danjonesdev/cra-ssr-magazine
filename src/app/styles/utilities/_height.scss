@@ -1,8 +1,12 @@
-.h1 { height: 1rem; }
-.h2 { height: 2rem; }
-.h3 { height: 4rem; }
+.h1 { height: 2rem; }
+.h2 { height: 4rem; }
+.h3 { height: 6rem; }
 .h4 { height: 8rem; }
-.h5 { height: 16rem; }
+.h5 { height: 10rem; }
+.h6 { height: 12rem; }
+.h7 { height: 14rem; }
+.h8 { height: 16rem; }
+.h9 { height: 18rem; }
 
 @for $i from 1 through 10 {
   .h-#{$i}0 {

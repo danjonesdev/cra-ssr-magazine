@@ -3,8 +3,8 @@ html {
 }
 
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: inherit;
 }
 
@@ -40,6 +40,15 @@ svg {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+address,
+cite,
+dfn,
+em,
+i,
+var {
+  font-style: normal;
 }
 
 // input,

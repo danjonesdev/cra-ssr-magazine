@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import ArticlesLatestComponent from '../../components/articles-latest';
+import ArticlesGrid from '../../components/articles-grid';
 
 import {getCurrentProfiles, removeCurrentProfiles} from '../../../modules/articles-latest';
 
@@ -26,7 +26,7 @@ class ArticlesLatest extends Component {
     const items = this.props.currentProfiles;
     const { padding } = this.props;
 
-    if (items.length) return <ArticlesLatestComponent items={items} padding={padding} />;
+    if (items.length) return <ArticlesGrid items={items} padding={padding} />;
     return false;
   }
 }

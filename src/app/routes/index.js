@@ -6,19 +6,19 @@ import NotFound from './not-found';
 
 const Homepage = Loadable({
   loader: () => import(/* webpackChunkName: "homepage" */ './homepage'),
-  loading: () => null,
+  loading: () => <p>TESSSSSSSSSSt</p>,
   modules: ['homepage']
 });
 
 const About = Loadable({
   loader: () => import(/* webpackChunkName: "about" */ './about'),
-  loading: () => null,
+  loading: () => <p>TESSSSSSSSSSt</p>,
   modules: ['about']
 });
 
 const Profile = Loadable({
   loader: () => import(/* webpackChunkName: "article" */ './article'),
-  loading: () => null,
+  loading: () => <p>TESSSSSSSSSSt</p>,
   modules: ['article']
 });
 
