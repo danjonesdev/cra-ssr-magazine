@@ -2,10 +2,10 @@ import { combineReducers } from 'redux';
 
 import auth from './auth';
 import article from './article';
-import articles from './articles';
+import {default as articlesLatest} from './articles-latest';
 
 export default combineReducers({
   auth,
   article,
-  articles
+  articlesLatest
 });

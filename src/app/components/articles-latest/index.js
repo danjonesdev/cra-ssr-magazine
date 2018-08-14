@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class ArticleList extends Component {
+class ArticlesLatestComponent extends Component {
   render() {
     const { items } = this.props;
 
@@ -14,4 +14,4 @@ class ArticleList extends Component {
   }
 }
 
-export default ArticleList;
+export default ArticlesLatestComponent;

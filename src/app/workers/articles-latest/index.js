@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import ArticleList from '../../components/article-list';
+import ArticlesLatestComponent from '../../components/articles-latest';
 
-import {getCurrentProfiles, removeCurrentProfiles} from '../../../modules/articles';
+import {getCurrentProfiles, removeCurrentProfiles} from '../../../modules/articles-latest';
 
 class ArticlesLatest extends Component {
   componentDidMount(nextProps) {
@@ -24,12 +24,12 @@ class ArticlesLatest extends Component {
 
   render() {
     const items = this.props.currentProfiles;
-    if (items.length) return <ArticleList items={items} />;
+    if (items.length) return <ArticlesLatestComponent items={items} />;
     return false;
   }
 }
 
-const mapStateToProps = state => ({currentProfiles: state.articles.currentProfiles});
+const mapStateToProps = state => ({currentProfiles: state.articlesLatest.currentProfiles});
 const mapDispatchToProps = dispatch => bindActionCreators({getCurrentProfiles, removeCurrentProfiles}, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(ArticlesLatest);

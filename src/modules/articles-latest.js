@@ -11,7 +11,7 @@ export default(state = initialState, action) => {
     case LATEST_ARTICLES:
       return {
         ...state,
-        currentProfiles: action.articles
+        currentProfiles: action.articlesLatest
       };
     default:
       return state;
@@ -38,13 +38,13 @@ export const getCurrentProfiles = id => dispatch => new Promise(resolve => {
     categories[]->,
   }`;
 
-  sanity.fetch(query).then(articles => {
-    dispatch({type: LATEST_ARTICLES, articles});
-    resolve(articles);
+  sanity.fetch(query).then(articlesLatest => {
+    dispatch({type: LATEST_ARTICLES, articlesLatest});
+    resolve(articlesLatest);
   })
 });
 
 export const removeCurrentProfiles = () => dispatch => new Promise(resolve => {
-  dispatch({type: LATEST_ARTICLES, articles: {}});
+  dispatch({type: LATEST_ARTICLES, articlesLatest: {}});
   resolve({});
 });
