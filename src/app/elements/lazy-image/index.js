@@ -9,7 +9,7 @@ class LazyImage extends Component {
       <React.Fragment>
         <LazyLoad height={200} offset={100} once>
           <div className="over-hidden">
-            <img className={`fadeIn-zoomIn  ${styles}`} src={src} alt={alt}/>
+            <img className={`fadeIn-zoomIn  objf-cover  objp-center  ${styles}`} src={src} alt={alt}/>
           </div>
         </LazyLoad>
       </React.Fragment>
