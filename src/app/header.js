@@ -11,6 +11,10 @@ const links = [
     text: 'About'
   },
   {
+    to: '/authors',
+    text: 'Authors'
+  },
+  {
     to: '/article/example-article-1',
     text: 'example article 1'
   },

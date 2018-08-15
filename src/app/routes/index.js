@@ -16,6 +16,12 @@ const About = Loadable({
   modules: ['about']
 });
 
+const Authors = Loadable({
+  loader: () => import(/* webpackChunkName: "authors" */ './authors'),
+  loading: () => <p>TESSSSSSSSSSt</p>,
+  modules: ['authors']
+});
+
 const Profile = Loadable({
   loader: () => import(/* webpackChunkName: "article" */ './article'),
   loading: () => <p>TESSSSSSSSSSt</p>,
@@ -26,6 +32,7 @@ export default () => (
   <Switch>
     <Route exact path="/" component={Homepage} />
     <Route exact path="/about" component={About} />
+    <Route exact path="/authors" component={Authors} />
     <Route exact path="/article/:id" component={Profile} />
     <Route component={NotFound} />
   </Switch>

@@ -17,7 +17,6 @@ class ArticlesCarousel extends Component {
   render() {
     const { items } = this.props;
     const { padding } = this.props;
-    console.log(items);
 
     return (
       <section className={`container-medium  mla  mra  ph0-sm  ${padding}`}>

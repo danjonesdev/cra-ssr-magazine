@@ -15,19 +15,13 @@ class ArticlesGrid extends Component {
             <article key={i} className="col-24  col-12-sm  col-6-md  pa3">
               <figure>
                 <Link className="link  db  shadow2" to={`/article/${item.slug.current}`}>
-                  <AnimatedImage lazy={true} src={item.mainImage} alt={item.title} styles="trans-all-1  h7  h9-sm  w-100" />
+                  <AnimatedImage lazy={true} src={item.mainImage} alt={item.name} styles="trans-all-1  h7  h9-sm  w-100" />
                 </Link>
               </figure>
 
-              <div className="pt2  mt2">
-                <address className="t-body  f6  mid-grey  dib">{item.author.name}</address>
-                <span className="t-body  f6  mid-grey  dib  ph1">|</span>
-                <time className="t-body  f6  mid-grey  dib" dateTime={item.publishedAt}>{item.publishedAt.split('T')[0]}</time>
-              </div>
               <Link className="link" to={`/article/${item.slug.current}`}>
-                <p className="t-title  bold  f6  f5-md  black  pt1  pb2">{item.title}</p>
+                <p className="t-title  bold  f6  f5-md  black  pt3  pb2">{item.name}</p>
               </Link>
-              <p className="t-body  f6  mid-grey  rel">{item.description.substring(0, 150)}...</p>
             </article>
           ))}
         </div>
