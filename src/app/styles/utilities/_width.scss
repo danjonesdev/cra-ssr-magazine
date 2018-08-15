@@ -10,13 +10,13 @@
   }
 }
 
-// @each $modifier, $breakpoint in $grid-breakpoints {
-//   $infix: breakpoint-infix($modifier, $grid-breakpoints);
-//   @include breakpoint-up($modifier, $grid-breakpoints) {
-//     @for $i from 1 through 10 {
-//       .w-#{$i}0-#{$infix} {
-//         width: #{$i};
-//       }
-//     }
-//   }
-// }
+@each $modifier, $breakpoint in $grid-breakpoints {
+  $infix: breakpoint-infix($modifier, $grid-breakpoints);
+  @include breakpoint-up($modifier, $grid-breakpoints) {
+    @for $i from 1 through 10 {
+      .w-#{$i}0-#{$infix} {
+        width: #{$i}0%;
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 // Vendor
 @import 'styles/vendor/normalize';
-// @import 'styles/vendor/flickity';
+@import 'styles/vendor/flickity';
 
 // Variables
 @import 'styles/vars/index';
@@ -35,7 +35,7 @@
 @import 'styles/utilities/font-style';
 @import 'styles/utilities/font-weight';
 @import 'styles/utilities/grid';
-// @import 'styles/utilities/height';
+@import 'styles/utilities/height';
 @import 'styles/utilities/helper';
 @import 'styles/utilities/hover';
 @import 'styles/utilities/line-height';
@@ -63,3 +63,8 @@
 
 // Modules
 @import 'styles/modules/nav';
+
+
+.trans-all-1 {
+  transition: all ease-in-out .5s;
+}

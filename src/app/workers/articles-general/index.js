@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import ArticlesCarousel from '../../components/articles-carousel';
+import ArticlesGrid from '../../components/articles-grid';
 
-import {getCurrentProfiles, removeCurrentProfiles} from '../../../modules/articles-latest';
+import {getCurrentProfiles, removeCurrentProfiles} from '../../../modules/articles-general';
 
-class ArticlesLatest extends Component {
+class Articlesgeneral extends Component {
   componentDidMount(nextProps) {
     this.props.getCurrentProfiles(nextProps);
   }
@@ -26,12 +26,12 @@ class ArticlesLatest extends Component {
     const items = this.props.currentProfiles;
     const { padding } = this.props;
 
-    if (items.length) return <ArticlesCarousel items={items} padding={padding} />;
+    if (items.length) return <ArticlesGrid items={items} padding={padding} />;
     return false;
   }
 }
 
-const mapStateToProps = state => ({currentProfiles: state.articlesLatest.currentProfiles});
+const mapStateToProps = state => ({currentProfiles: state.articlesGeneral.currentProfiles});
 const mapDispatchToProps = dispatch => bindActionCreators({getCurrentProfiles, removeCurrentProfiles}, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(ArticlesLatest);
+export default connect(mapStateToProps, mapDispatchToProps)(Articlesgeneral);

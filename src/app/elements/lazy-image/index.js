@@ -3,15 +3,25 @@ import LazyLoad from 'react-lazyload';
 
 class LazyImage extends Component {
   render() {
-    const { src, alt, styles } = this.props;
+    const { lazy, src, alt, styles } = this.props;
+
+    if (lazy) {
+      return (
+        <React.Fragment>
+          <LazyLoad height={200} offset={100} once>
+            <div className="over-hidden">
+              <img className={`fadeIn-zoomIn  objf-cover  objp-center  ${styles}`} src={src} alt={alt}/>
+            </div>
+          </LazyLoad>
+        </React.Fragment>
+      );
+    }
 
     return (
       <React.Fragment>
-        <LazyLoad height={200} offset={100} once>
-          <div className="over-hidden">
-            <img className={`fadeIn-zoomIn  objf-cover  objp-center  ${styles}`} src={src} alt={alt}/>
-          </div>
-        </LazyLoad>
+        <div className="over-hidden">
+          <img className={`fadeIn-zoomIn  objf-cover  objp-center  ${styles}`} src={src} alt={alt}/>
+        </div>
       </React.Fragment>
     );
   }

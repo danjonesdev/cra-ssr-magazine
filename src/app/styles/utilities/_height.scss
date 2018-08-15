@@ -1,23 +1,26 @@
-.h1 { height: 2rem; }
-.h2 { height: 4rem; }
-.h3 { height: 6rem; }
-.h4 { height: 8rem; }
-.h5 { height: 10rem; }
-.h6 { height: 12rem; }
-.h7 { height: 14rem; }
-.h8 { height: 16rem; }
-.h9 { height: 18rem; }
+@each $i, $value in $heights {
+  .h#{$i} { height: $value; }
+}
 
-@for $i from 1 through 10 {
-  .h-#{$i}0 {
-    height: #{$i}0%;
+@each $modifier, $breakpoint in $grid-breakpoints {
+  $infix: breakpoint-infix($modifier, $grid-breakpoints);
+  @include breakpoint-up($modifier, $grid-breakpoints) {
+    @each $i, $value in $heights {
+      .h#{$i}-#{$infix} { height: $value; }
+    }
   }
 }
 
-.vh-100 {
-  height: 100vh;
-}
-
-.mvh-100 {
-  min-height: 100vh;
-}
+// @for $i from 1 through 10 {
+//   .h-#{$i}0 {
+//     height: #{$i}0%;
+//   }
+// }
+//
+// .vh-100 {
+//   height: 100vh;
+// }
+//
+// .mvh-100 {
+//   min-height: 100vh;
+// }

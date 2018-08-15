@@ -1,12 +1,12 @@
 import sanity from './sanity'
 
-export const LATEST_ARTICLES = 'auth/LATEST_ARTICLES';
+export const GENERAL_ARTICLES = 'auth/GENERAL_ARTICLES';
 
 const initialState = { currentProfiles: {} };
 
 export default(state = initialState, action) => {
   switch (action.type) {
-    case LATEST_ARTICLES:
+    case GENERAL_ARTICLES:
       return {
         ...state,
         currentProfiles: action.articlesLatest
@@ -30,7 +30,7 @@ export const getCurrentProfiles = id => dispatch => new Promise(resolve => {
   //  }`;
 
   const query =
-  `*[_type == "post"][0..3] {
+  `*[_type == "post"][4..24] {
     ...,
     author->,
     categories[]->,
@@ -38,12 +38,12 @@ export const getCurrentProfiles = id => dispatch => new Promise(resolve => {
   }`;
 
   sanity.fetch(query).then(articlesLatest => {
-    dispatch({type: LATEST_ARTICLES, articlesLatest});
+    dispatch({type: GENERAL_ARTICLES, articlesLatest});
     resolve(articlesLatest);
   })
 });
 
 export const removeCurrentProfiles = () => dispatch => new Promise(resolve => {
-  dispatch({type: LATEST_ARTICLES, articlesLatest: {}});
+  dispatch({type: GENERAL_ARTICLES, articlesLatest: {}});
   resolve({});
 });

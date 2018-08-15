@@ -18,6 +18,7 @@
     "prettier": "^1.13.4",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-flickity-component": "^3.0.3",
     "react-frontload": "^1.0.1",
     "react-helmet": "^5.2.0",
     "react-lazyload": "^2.3.0",
