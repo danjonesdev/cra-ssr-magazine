@@ -21,25 +21,26 @@ class AnimatedHeading extends Component {
     }
   }
 
-  loopChars = (title) => {
+  loopChars = (title, styles) => {
     let letters = []
     for (let i = 0; i < title.length; i++) {
       letters.push(
-        <span key={i} className={`t-title  ttu  bold  f5  animatedHeading__letter  animatedHeading__letter--${i}`}>{title.charAt(i)}</span>
+        <span key={i} className={`${styles}  animatedHeading__letter  animatedHeading__letter--${i}`}>{title.charAt(i)}</span>
       );
     }
     return letters;
   }
 
   render() {
-    const { type, title, padding } = this.props;
+    const { type, title, padding, fullWidth, styles } = this.props;
+    const fullWidthClass = fullWidth ? 'container  mla  mra  tac' : null;
 
     return (
-      <div className={`container  mla  mra  tac  ${padding}`}>
+      <div className={`${fullWidthClass}  ${padding}`}>
         {this.heading(title, type)}
 
         <LazyLoad height={100} offset={-100} once>
-          {this.loopChars(title)}
+          {this.loopChars(title, styles)}
         </LazyLoad>
       </div>
     );

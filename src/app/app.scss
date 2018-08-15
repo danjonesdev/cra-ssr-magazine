@@ -62,37 +62,37 @@
 @import 'styles/elements/animations';
 
 // Modules
+@import 'styles/modules/page';
 @import 'styles/modules/nav';
 
 
 .trans-all-1 {
-  transition: all ease-in-out .5s;
+  transition: all ease-in-out 0.5s;
 }
 
 .article__hero {
-  height: 40vh;
+  min-height: 50vh;
+}
+
+.article__hero__bg {
   width: 100%;
+  height: 30vh;
   overflow: hidden;
 }
 
-.article__hero--bg {
-  height: 50vh;
-  width: 130%;
-  position: absolute;
-  top: -30px;
-  left: -15%;
-  margin: 0 auto;
-  filter: blur(8px);
-  background-position: center;
-  background-repeat: no-repeat;
+.article__hero__bg > div {
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(8px);
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
-.article__hero--img {
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 50px;
+.article__hero__img {
   object-fit: cover;
   object-position: center;
   height: 40vh;

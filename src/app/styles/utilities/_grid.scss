@@ -1,4 +1,5 @@
-.container,
+.container-small,
+.container-medium,
 .container-large {
   width: 100%;
   padding-left: 20px;
@@ -6,14 +7,19 @@
 }
 
 @include breakpoint-up(md) {
-  .container,
+  .container-small,
+  .container-medium,
   .container-large {
     padding-left: 30px;
     padding-right: 30px;
   }
 }
 
-.container {
+.container-small {
+  max-width: 1080px;
+}
+
+.container-medium {
   max-width: 1200px;
 }
 

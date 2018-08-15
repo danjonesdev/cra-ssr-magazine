@@ -10,7 +10,7 @@ class ArticlesGrid extends Component {
     console.log(items);
 
     return (
-      <section className={`container  mla  mra  ${padding}`}>
+      <section className={`container-medium  mla  mra  ${padding}`}>
         <div className="flex  flex-wrap">
           {items.map((item, i) => (
             <article key={i} className="col-24  col-12-sm  col-6-md  pa3">

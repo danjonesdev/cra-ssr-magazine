@@ -87,11 +87,15 @@ class Profile extends Component {
     if (item._id) {
       return (
         <Page id="article" title={item.title} description="d" image="d">#
-          <MainImage mainImage={item.mainImage} alt={item.title} padding="pb5  mb3" />
-          <AnimatedHeading type="h1" title={item.title} padding="pt3" />
-          {item.body.map((item, i) => (
-            this.renderBody(item, i)
-          ))}
+          <MainImage mainImage={item.mainImage} alt={item.title} padding="pb4" />
+
+          <div className="container-small  mla  mra  pa3  pa5-sm  ba  bc-light-grey  shadow2">
+            <AnimatedHeading type="h1" title={item.title} padding="pb3" fullWidth={false} styles="t-title  ttu  bold  f5  tal" />
+
+            {item.body.map((item, i) => (
+              this.renderBody(item, i)
+            ))}
+          </div>
         </Page>
       );
     }

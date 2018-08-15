@@ -1,0 +1,19 @@
+.page {
+  // -moz-transition: all 200ms ease-in-out;
+  // -webkit-transition: all 200ms ease-in-out;
+  // -o-transition: all 200ms ease-in-out;
+  // transition: all 200ms ease-in-out;
+}
+
+.page__fadeIn {
+  -webkit-animation: page__fadeIn 0.3s ease-in-out; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: page__fadeIn 0.3s ease-in-out; /* Firefox < 16 */
+    -ms-animation: page__fadeIn 0.3s ease-in-out; /* Internet Explorer */
+     -o-animation: page__fadeIn 0.3s ease-in-out; /* Opera < 12.1 */
+        animation: page__fadeIn 0.3s ease-in-out;
+}
+
+@keyframes page__fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

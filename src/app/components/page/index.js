@@ -85,7 +85,7 @@ class Page extends Component {
     const { children, id, className, ...rest } = this.props;
 
     return (
-      <div id={id} className={className}>
+      <div id={id} className={`page  page__fadeIn  ${className}`}>
         <Helmet
           htmlAttributes={{
             lang: 'en',

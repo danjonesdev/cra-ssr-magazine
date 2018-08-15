@@ -1,7 +1,7 @@
 .fadeIn-zoomIn {
-  animation: zoomIn 0.6s ease both, fadeIn 0.4s ease both;
-  animation-delay: 0s;
+  animation: fadeIn 0.4s ease both, zoomIn 0.8s ease both;
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -11,9 +11,10 @@
     opacity: 1;
   }
 }
+
 @keyframes zoomIn {
   0% {
-    transform: scale(1.5);
+    transform: scale(1.1);
   }
 
   100% {
