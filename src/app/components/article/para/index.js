@@ -6,17 +6,17 @@ class Para extends Component {
       if (child.marks) {
 
         if (child.marks.includes('stong') && child.marks.includes('em')) {
-          return <p key={i} className="di"><strong><em>{child.text}</em></strong></p>
+          return <p key={i} className="di  t-body  f6  black  pv3"><strong><em>{child.text}</em></strong></p>
         }
         if (child.marks.includes('strong')) {
-          return <p key={i} className="di"><strong>{child.text}</strong></p>
+          return <p key={i} className="di  t-body  f6  black  pv3"><strong>{child.text}</strong></p>
         }
         if (child.marks.includes('em')) {
-          return <p key={i} className="di"><em>{child.text}</em></p>
+          return <p key={i} className="di  t-body  f6  black  pv3"><em>{child.text}</em></p>
         }
       }
 
-      return <p key={i} className="di">{child.text}</p>
+      return <p key={i} className="db  t-body  f6  black  pv3">{child.text}</p>
     }
 
     return false;

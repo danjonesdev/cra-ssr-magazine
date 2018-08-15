@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Flickity from 'react-flickity-component'
 
-import LazyImg from '../../elements/lazy-image'
+import AnimatedImage from '../../elements/animated-image'
 
 class ArticlesCarousel extends Component {
 
@@ -20,7 +20,7 @@ class ArticlesCarousel extends Component {
     console.log(items);
 
     return (
-      <section className={`container-large  mla  mra  ph0  ${padding}`}>
+      <section className={`container-medium  mla  mra  ph0-sm  ${padding}`}>
         <Flickity
           className={'carousel'} // default ''
           elementType={'div'} // default 'div'
@@ -29,10 +29,10 @@ class ArticlesCarousel extends Component {
           reloadOnUpdate={false} // default false
         >
           {items.map((item, i) => (
-            <article key={i} className="w-80  w-40-md  mlra  mra  pa3">
+            <article key={i} className="w-100  w-40-sm  mlra  mra  pa3">
               <figure>
                 <Link className="link  db  shadow2" to={`/article/${item.slug.current}`}>
-                  <LazyImg lazy={false} src={item.mainImage} alt={item.title} styles="trans-all-1  h7  h9-sm  w-100" />
+                  <AnimatedImage lazy={false} src={item.mainImage} alt={item.title} styles="trans-all-1  h7  h9-sm  w-100" />
                 </Link>
               </figure>
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LazyLoad from 'react-lazyload';
 
-class LazyImage extends Component {
+class AnimatedImage extends Component {
   render() {
     const { lazy, src, alt, styles } = this.props;
 
@@ -27,4 +27,4 @@ class LazyImage extends Component {
   }
 }
 
-export default LazyImage;
+export default AnimatedImage;

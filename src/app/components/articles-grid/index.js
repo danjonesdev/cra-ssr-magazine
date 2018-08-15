@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import LazyImg from '../../elements/lazy-image'
+import AnimatedImage from '../../elements/animated-image'
 
 class ArticlesGrid extends Component {
   render() {
@@ -16,7 +16,7 @@ class ArticlesGrid extends Component {
             <article key={i} className="col-24  col-12-sm  col-6-md  pa3">
               <figure>
                 <Link className="link  db  shadow2" to={`/article/${item.slug.current}`}>
-                  <LazyImg lazy={true} src={item.mainImage} alt={item.title} styles="trans-all-1  h7  h9-sm  w-100" />
+                  <AnimatedImage lazy={true} src={item.mainImage} alt={item.title} styles="trans-all-1  h7  h9-sm  w-100" />
                 </Link>
               </figure>
 

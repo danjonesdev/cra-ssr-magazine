@@ -86,11 +86,11 @@ class Profile extends Component {
 
     if (item._id) {
       return (
-        <Page id="article" title={item.title} description="d" image="d">#
-          <MainImage mainImage={item.mainImage} alt={item.title} padding="pb4" />
+        <Page id="article" title={item.title} description="d" image="d">
+          <MainImage mainImage={item.mainImage} alt={item.title} padding="pb3" />
 
           <div className="container-small  mla  mra  pa3  pa5-sm">
-            <AnimatedHeading type="h1" title={item.title} padding="pb3" fullWidth={false} styles="t-title  ttu  bold  f5  tal" />
+            <AnimatedHeading type="h1" title={item.title} padding="pb3" fullWidth={false} styles="t-title  ttu  bold  f4  tal" />
 
             {item.body.map((item, i) => (
               this.renderBody(item, i)
