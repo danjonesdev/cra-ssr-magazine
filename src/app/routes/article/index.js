@@ -6,9 +6,7 @@ import {frontloadConnect} from 'react-frontload';
 import Page from '../../components/page';
 import MainImage from '../../components/article/main-image'
 import AnimatedHeading from '../../elements/animated-heading';
-import Para from '../../components/article/para';
-import Bullet from '../../components/article/bullet';
-import Number from '../../components/article/number';
+import ArticleSections from '../../components/article'
 
 import {getCurrentProfile, removeCurrentProfile} from '../../../modules/article';
 
@@ -35,51 +33,6 @@ class Profile extends Component {
     return true;
   }
 
-  // renderItem = (item) => {
-  //   return (
-  //     <React.Fragment>
-  //       <p>{item.title}</p>
-  //       <img src={item.mainImg} alt={item.title} />
-  //     </React.Fragment>
-  //   );
-  // }
-
-  renderBody = (item, i) => {
-    if (item._type === 'block' && !item.listItem) {
-      return (
-        <div key={i}>
-          <Para children={item.children} />
-        </div>
-      );
-    }
-
-    if (item._type === 'block' && item.listItem === 'bullet') {
-      return (
-        <ul key={i}>
-          <Bullet children={item.children} />
-        </ul>
-      );
-    }
-
-    if (item._type === 'block' && item.listItem === 'number') {
-      if (!this.state.numberListOpen) {
-        // this.setState({ numberListOpen: true });
-        return (
-          <ul key={i}>
-          <Number children={item.children} />
-          </ul>
-        );
-      } else {
-        // this.setState({ numberListOpen: false });
-        return (
-          <ul key={i}>
-          <Number children={item.children} />
-          </ul>
-        );
-      }
-    }
-  }
-
   render() {
     const item = this.props.currentProfile;
     console.log(item);
@@ -91,10 +44,7 @@ class Profile extends Component {
 
           <div className="container-small  mla  mra  pa3  pa5-sm">
             <AnimatedHeading type="h1" title={item.title} padding="pb3" fullWidth={false} styles="t-title  ttu  bold  f4  tal" />
-
-            {item.body.map((item, i) => (
-              this.renderBody(item, i)
-            ))}
+            <ArticleSections body={item.body} />
           </div>
         </Page>
       );
