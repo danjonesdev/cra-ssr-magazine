@@ -9,7 +9,7 @@ class Authors extends Component {
 
     return (
       <Page id="article" title="Home" description="xx" image="d">
-        <AnimatedHeading type="h1" title="Home" padding="pt4  mt2" fullWidth={true} styles="t-title  ttu  bold  f5  tac" />
+        <AnimatedHeading type="h1" title="Authors" padding="pt4  mt2" fullWidth={true} styles="t-title  ttu  bold  f5  tac" />
         <AuthorsWorker {...this.props} padding="pt2  pb3" />
       </Page>
     );
