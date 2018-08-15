@@ -2,36 +2,37 @@ import React, { Component } from 'react';
 
 class Para extends Component {
   renderChildren = (child, i) => {
-    if (child.text) {
-      if (child.marks) {
+    if (child.marks) {
 
-        if (child.marks.includes('stong') && child.marks.includes('em')) {
-          return <p key={i} className="di  t-body  f6  black  pv3"><strong><em>{child.text}</em></strong></p>
-        }
-        if (child.marks.includes('strong')) {
-          return <p key={i} className="di  t-body  f6  black  pv3"><strong>{child.text}</strong></p>
-        }
-        if (child.marks.includes('em')) {
-          return <p key={i} className="di  t-body  f6  black  pv3"><em>{child.text}</em></p>
-        }
+      if (child.marks.includes('stong') && child.marks.includes('em')) {
+        return <strong key={i} className="di"><em>{child.text}</em></strong>;
       }
-
-      return <p key={i} className="db  t-body  f6  black  pv3">{child.text}</p>
+      if (child.marks.includes('strong')) {
+        return <strong key={i} className="di">{child.text}</strong>;
+      }
+      if (child.marks.includes('em')) {
+        return <em key={i} className="di">{child.text}</em>;
+      }
     }
 
-    return false;
+    return child.text;
   }
 
   render() {
     const { children } = this.props;
 
-    return (
-      <React.Fragment>
-        {children.map((child, i) => (
-          this.renderChildren(child, i)
-        ))}
-      </React.Fragment>
-    );
+    if (children[0].text) {
+      return (
+        <React.Fragment>
+          <p className="db  t-body  f6  black  pv3">
+            {children.map((child, i) => (
+              this.renderChildren(child, i)
+            ))}
+          </p>
+        </React.Fragment>
+      );
+    }
+    return false;
   }
 }
 
