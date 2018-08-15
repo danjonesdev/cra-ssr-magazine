@@ -89,7 +89,7 @@ class Profile extends Component {
         <Page id="article" title={item.title} description="d" image="d">#
           <MainImage mainImage={item.mainImage} alt={item.title} padding="pb4" />
 
-          <div className="container-small  mla  mra  pa3  pa5-sm  ba  bc-light-grey  shadow2">
+          <div className="container-small  mla  mra  pa3  pa5-sm">
             <AnimatedHeading type="h1" title={item.title} padding="pb3" fullWidth={false} styles="t-title  ttu  bold  f5  tal" />
 
             {item.body.map((item, i) => (
