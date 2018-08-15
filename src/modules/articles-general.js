@@ -30,7 +30,7 @@ export const getCurrentProfiles = id => dispatch => new Promise(resolve => {
   //  }`;
 
   const query =
-  `*[_type == "post"][4..24] {
+  `*[_type == "post"] | order(publishedAt desc) [4..24] {
     ...,
     author->,
     categories[]->,
