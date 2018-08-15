@@ -31,30 +31,31 @@ const isCurrent = (to, current) => {
 };
 
 const HeaderLink = ({ to, text, current }) => (
-  <li className={isCurrent(to, current) ? 'current' : ''}>
-    <Link to={to}>{text}</Link>
+  <li className="di">
+    <Link className={`t-title  f5  bold  ph2  link  ${isCurrent(to, current) ? 'mid-grey' : 'black'}`} to={to}>{text}</Link>
   </li>
 );
 
 export default ({ isAuthenticated, current }) => (
-  <header id="header">
-    <h1 id="title">My awesome website</h1>
-    <ul id="links">
-      {links.map((link, index) => {
-        const TheLink = <HeaderLink key={index} current={current} {...link} />;
+  <header className="pb4" id="header">
+    <nav className="bb  bc-light-grey  shadow1  pv2">
+      <ul className="tac  mla  lra" id="links">
+        {links.map((link, index) => {
+          const TheLink = <HeaderLink key={index} current={current} {...link} />;
 
-        if (link.hasOwnProperty('auth')) {
-          if (link.auth && isAuthenticated) {
-            return TheLink;
-          } else if (!link.auth && !isAuthenticated) {
-            return TheLink;
+          if (link.hasOwnProperty('auth')) {
+            if (link.auth && isAuthenticated) {
+              return TheLink;
+            } else if (!link.auth && !isAuthenticated) {
+              return TheLink;
+            }
+
+            return null;
           }
 
-          return null;
-        }
-
-        return TheLink;
-      })}
-    </ul>
+          return TheLink;
+        })}
+      </ul>
+    </nav>
   </header>
 );

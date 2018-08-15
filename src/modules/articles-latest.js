@@ -2,9 +2,7 @@ import sanity from './sanity'
 
 export const LATEST_ARTICLES = 'auth/LATEST_ARTICLES';
 
-const initialState = {
-  currentProfiles: {}
-};
+const initialState = { currentProfiles: {} };
 
 export default(state = initialState, action) => {
   switch (action.type) {
