@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import LazyLoad from 'react-lazyload';
 
 class AnimatedHeading extends Component {
-  heading = (type, title) => {
+  heading = (title, type) => {
     switch (type) {
       case 'h1':
         return <h1 className="dn">{title}</h1>;
@@ -20,17 +20,26 @@ class AnimatedHeading extends Component {
         return null;
     }
   }
+
+  loopChars = (title) => {
+    let letters = []
+    for (let i = 0; i < title.length; i++) {
+      letters.push(
+        <span key={i} className={`t-title  ttu  bold  f5  animatedHeading__letter  animatedHeading__letter--${i}`}>{title.charAt(i)}</span>
+      );
+    }
+    return letters;
+  }
+
   render() {
-    const { type, title, loop } = this.props;
+    const { type, title, padding } = this.props;
 
     return (
-      <div className="container  mla  mra  tac">
-        {this.heading(type, title)}
+      <div className={`container  mla  mra  tac  ${padding}`}>
+        {this.heading(title, type)}
 
         <LazyLoad height={100} offset={-100} once>
-          {loop.map((letter, i) => (
-            <span key={i} className={`t-title  ttu  bold  f5  animatedHeading__letter  animatedHeading__letter--${i}`}>{letter}</span>
-          ))}
+          {this.loopChars(title)}
         </LazyLoad>
       </div>
     );

@@ -37,7 +37,7 @@ const HeaderLink = ({ to, text, current }) => (
 );
 
 export default ({ isAuthenticated, current }) => (
-  <header className="pb4  mb2" id="header">
+  <header id="header">
     <nav className="bb  bc-light-grey  shadow1  pv2">
       <ul className="tac  mla  lra" id="links">
         {links.map((link, index) => {

@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 import {frontloadConnect} from 'react-frontload';
 
 import Page from '../../components/page';
+import MainImage from '../../components/article/main-image'
+import AnimatedHeading from '../../elements/animated-heading';
 import Para from '../../components/article/para';
 import Bullet from '../../components/article/bullet';
 import Number from '../../components/article/number';
@@ -80,10 +82,13 @@ class Profile extends Component {
 
   render() {
     const item = this.props.currentProfile;
+    console.log(item);
 
     if (item._id) {
       return (
-        <Page id="article" title={item.title} description="d" image="d">
+        <Page id="article" title={item.title} description="d" image="d">#
+          <MainImage mainImage={item.mainImage} alt={item.title} padding="pb5  mb3" />
+          <AnimatedHeading type="h1" title={item.title} padding="pt3" />
           {item.body.map((item, i) => (
             this.renderBody(item, i)
           ))}

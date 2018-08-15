@@ -31,6 +31,7 @@ export const getCurrentProfile = id => dispatch => new Promise(resolve => {
     ...,
     author->,
     categories[]->,
+    "mainImage": mainImage.asset->url,
   }`;
 
   const params = {

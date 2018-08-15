@@ -68,3 +68,32 @@
 .trans-all-1 {
   transition: all ease-in-out .5s;
 }
+
+.article__hero {
+  height: 40vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.article__hero--bg {
+  height: 50vh;
+  width: 130%;
+  position: absolute;
+  top: -30px;
+  left: -15%;
+  margin: 0 auto;
+  filter: blur(8px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.article__hero--img {
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50px;
+  object-fit: cover;
+  object-position: center;
+  height: 40vh;
+}
