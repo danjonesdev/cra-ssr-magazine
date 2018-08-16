@@ -12,16 +12,7 @@ import {getCurrentProfile, removeCurrentProfile} from '../../../modules/article'
 
 const frontload = async props => await props.getCurrentProfile(props.match.params.id);
 
-class Profile extends Component {
-  constructor(props) {
-    super(props);
-    // Don't call this.setState() here!
-    this.state = {
-      bulletListOpen: false,
-      numberListOpen: false
-    };
-  }
-
+class Article extends Component {
   componentWillUnmount() {
     this.props.removeCurrentProfile();
   }
@@ -43,8 +34,12 @@ class Profile extends Component {
           <MainImage mainImage={item.mainImage} alt={item.title} padding="pb3" />
 
           <div className="container-small  mla  mra  pa3  pa5-sm">
-            <AnimatedHeading type="h1" title={item.title} padding="pb3" fullWidth={false} styles="t-title  ttu  bold  f4  tal" />
-            <ArticleSections body={item.body} />
+            <div className="flex  justify-center">
+              <div className="col-22  col-20-sm  col-18-md  col-16-lg">
+                <AnimatedHeading type="h1" title={item.title} padding="pb3" fullWidth={false} styles="t-title  ttu  bold  f4  tal" />
+                <ArticleSections body={item.body} />
+              </div>
+            </div>
           </div>
         </Page>
       );
@@ -63,4 +58,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 export default connect(mapStateToProps, mapDispatchToProps)(frontloadConnect(frontload, {
   onMount: true,
   onUpdate: false
-})(Profile));
+})(Article));

@@ -17,18 +17,6 @@ export default(state = initialState, action) => {
 };
 
 export const getCurrentProfiles = id => dispatch => new Promise(resolve => {
-  // const query = `
-  // *[_type == "article"]
-  //  {
-  //    title,
-  //    "mainImg": mainImg.asset->url,
-  //    "category": category[] {
-  //     "categoryItem": articleCategoryList-> {
-  //       categoryName
-  //     }
-  //   }
-  //  }`;
-
   const query =
   `*[_type == "author"] [0..24] {
     ...,

@@ -8,7 +8,8 @@ class ArticlesCarousel extends Component {
 
   flickityOptions = {
     wrapAround: true,
-    autoPlay: 3000,
+    autoPlay: 2000,
+    pauseAutoPlayOnHover: false,
     prevNextButtons: false,
     cellAlign: 'center',
     pageDots: false,

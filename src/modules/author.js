@@ -1,6 +1,6 @@
 import sanity from './sanity'
 
-export const ARTICLE = 'auth/ARTICLE';
+export const AUTHOR = 'auth/AUTHOR';
 
 const initialState = {
   currentProfile: {}
@@ -8,10 +8,10 @@ const initialState = {
 
 export default(state = initialState, action) => {
   switch (action.type) {
-    case ARTICLE:
+    case AUTHOR:
       return {
         ...state,
-        currentProfile: action.article
+        currentProfile: action.author
       };
     default:
       return state;
@@ -20,24 +20,27 @@ export default(state = initialState, action) => {
 
 export const getCurrentProfile = id => dispatch => new Promise(resolve => {
   const query =
-  `*[_type == "post" && slug.current == $id][0] {
+  `*[_type == "author" && slug.current == $id][0] {
     ...,
     author->,
-    categories[]->,
-    "mainImage": mainImage.asset->url,
+    "image": image.asset->url,
+    "articles": *[_type == "post" && references(^._id)] {
+      ...,
+      "mainImage": mainImage.asset->url,
+    }
   }`;
 
   const params = {
     id: id
   };
 
-  sanity.fetch(query, params).then(article => {
-    dispatch({type: ARTICLE, article});
-    resolve(article);
+  sanity.fetch(query, params).then(author => {
+    dispatch({type: AUTHOR, author});
+    resolve(author);
   })
 });
 
 export const removeCurrentProfile = () => dispatch => new Promise(resolve => {
-  dispatch({type: ARTICLE, article: {}});
+  dispatch({type: AUTHOR, author: {}});
   resolve({});
 });
