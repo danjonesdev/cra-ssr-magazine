@@ -44,6 +44,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
-    "serve": "NODE_ENV=production node ./server/index.js"
+    "serve": "NODE_ENV=production node ./server/index.js",
+    "buildserve": "concurrently --kill-others \"react-scripts build\" \"NODE_ENV=production node ./server/index.js\""
   }
 }
