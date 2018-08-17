@@ -6,9 +6,9 @@ import logo from '../../assets/logo.jpg';
 const SITE_URL =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000'
-    : 'https://cra-ssr.herokuapp.com';
+    : 'https://cra-ssr-magazine.herokuapp.com/';
 
-const FACEBOOK_APP_ID = 'XXXXXXXXX';
+const FACEBOOK_APP_ID = '619613621773409';
 
 const defaultTitle = 'My Website';
 const defaultDescription =
