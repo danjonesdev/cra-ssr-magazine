@@ -7,7 +7,6 @@
     "@sanity/block-content-to-react": "^2.0.2",
     "@sanity/client": "^0.132.5",
     "@sanity/image-url": "^0.132.5",
-    "concurrently": "^3.6.1",
     "connected-react-router": "^4.3.0",
     "cookie-parser": "^1.4.3",
     "forcedomain": "^1.0.0",
@@ -46,6 +45,6 @@
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
     "serve": "NODE_ENV=production node ./server/index.js",
-    "buildserve": "concurrently --kill-others \"react-scripts build\" \"NODE_ENV=production node ./server/index.js\""
+    "buildserve": "npm run build && npm run serve"
   }
 }
