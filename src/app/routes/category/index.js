@@ -6,10 +6,11 @@ import ArticlesCategory from '../../workers/articles-category';
 
 class Category extends Component {
   render() {
+    const categoryTitle = this.props.match.params.id.replace(/^\w/, c => c.toUpperCase());
 
     return (
-      <Page id="article" title="Home" description="xx" image="d">
-        <AnimatedHeading type="h1" title="Category" padding="pt4  mt2" fullWidth={true} styles="t-title  ttu  bold  f5  tac" />
+      <Page id="category" title={categoryTitle}>
+        <AnimatedHeading type="h1" title={this.props.match.params.id} padding="pt4  mt2" fullWidth={true} styles="t-title  ttu  bold  f5  tac" />
         <ArticlesCategory {...this.props} padding="pt4  pb2" />
       </Page>
     );

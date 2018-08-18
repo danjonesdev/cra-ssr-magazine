@@ -10,11 +10,11 @@ const SITE_URL =
 
 const FACEBOOK_APP_ID = '619613621773409';
 
-const defaultTitle = 'My Website';
+const defaultTitle = 'Rendah';
 const defaultDescription =
-  'This is a really awesome website where we can render on the server. Supa cool.';
+  'Beats, Halftime & Future Bass Magazine focused on the latest news & releases.';
 const defaultImage = `${SITE_URL}${logo}`;
-const defaultTwitter = '@cereallarceny';
+const defaultTwitter = '@rendahmag';
 const defaultSep = ' | ';
 
 class Page extends Component {

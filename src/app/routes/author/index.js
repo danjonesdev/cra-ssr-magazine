@@ -28,7 +28,7 @@ class Author extends Component {
 
     if (profile._id) {
       return (
-        <Page id="author" title={profile.title} description="d" image="d">
+        <Page id="author" title={profile.title} description={profile.title} image={profile.mainImage}>
           <AuthorComponent profile={profile} padding="pt4  mt2" />
           <ArticlesGrid items={profile.articles} padding="pt4  pb2" />
         </Page>

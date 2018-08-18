@@ -8,7 +8,7 @@ class Authors extends Component {
   render() {
 
     return (
-      <Page id="article" title="Home" description="xx" image="d">
+      <Page id="authors" title="Authors">
         <AnimatedHeading type="h1" title="Authors" padding="pt4  mt2" fullWidth={true} styles="t-title  ttu  bold  f5  tac" />
         <AuthorsWorker {...this.props} padding="pt2  pb3" />
       </Page>

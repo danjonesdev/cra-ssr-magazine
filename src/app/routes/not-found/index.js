@@ -5,9 +5,9 @@ export default () => (
   <Page
     id="not-found"
     title="Not Found"
-    description="This is embarrassing."
+    description="This page does not exist..."
     noCrawl
   >
-    <p>Super embarrassing.</p>
+    <p>This page does not exist...</p>
   </Page>
 );
