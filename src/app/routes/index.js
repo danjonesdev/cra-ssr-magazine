@@ -10,6 +10,12 @@ const Homepage = Loadable({
   modules: ['homepage']
 });
 
+const Category = Loadable({
+  loader: () => import(/* webpackChunkName: "category" */ './category'),
+  loading: () => <p>TESSSSSSSSSSt</p>,
+  modules: ['category']
+});
+
 const About = Loadable({
   loader: () => import(/* webpackChunkName: "about" */ './about'),
   loading: () => <p>TESSSSSSSSSSt</p>,
@@ -37,6 +43,7 @@ const Article = Loadable({
 export default () => (
   <Switch>
     <Route exact path="/" component={Homepage} />
+    <Route exact path="/category/:id" component={Category} />
     <Route exact path="/about" component={About} />
     <Route exact path="/authors" component={Authors} />
     <Route exact path="/author/:id" component={Author} />

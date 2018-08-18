@@ -19,6 +19,10 @@ const links = [
     text: 'dan jones'
   },
   {
+    to: '/category/insights',
+    text: 'cat insights'
+  },
+  {
     to: '/article/example-article-1',
     text: 'example article 1'
   },

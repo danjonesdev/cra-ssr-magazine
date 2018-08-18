@@ -23,7 +23,7 @@ export const getCurrentProfile = id => dispatch => new Promise(resolve => {
   `*[_type == "post" && slug.current == $id][0] {
     ...,
     author->,
-    categories[]->,
+    category->,
     "mainImage": mainImage.asset->url,
   }`;
 

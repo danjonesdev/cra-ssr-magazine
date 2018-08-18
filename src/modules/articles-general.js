@@ -21,7 +21,7 @@ export const getCurrentProfiles = id => dispatch => new Promise(resolve => {
   `*[_type == "post"] | order(publishedAt desc) [4..24] {
     ...,
     author->,
-    categories[]->,
+    category->,
     "mainImage": mainImage.asset->url,
   }`;
 
