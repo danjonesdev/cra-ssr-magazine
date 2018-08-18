@@ -32,11 +32,10 @@ class AnimatedHeading extends Component {
   }
 
   render() {
-    const { type, title, padding, fullWidth, styles } = this.props;
-    const fullWidthClass = fullWidth ? 'container  mla  mra  tac' : null;
+    const { type, title, padding, styles } = this.props;
 
     return (
-      <div className={`${fullWidthClass}  ${padding}`}>
+      <div className={`container-medium  mla  mra  tac  tal-md  ${padding}`}>
         {this.heading(title, type)}
 
         <LazyLoad height={100} offset={-100} once>

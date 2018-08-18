@@ -14,12 +14,12 @@ class ArticlesGrid extends Component {
           {items.map((item, i) => (
             <article key={i} className="col-24  col-12-sm  col-6-md  pa3">
               <figure>
-                <Link className="link  db  shadow2" to={`/article/${item.slug.current}`}>
+                <Link className="link  db  shadow2" to={`/author/${item.slug.current}`}>
                   <AnimatedImage lazy={true} src={item.mainImage} alt={item.name} styles="trans-all-1  h7  h9-sm  w-100" />
                 </Link>
               </figure>
 
-              <Link className="link" to={`/article/${item.slug.current}`}>
+              <Link className="link" to={`/author/${item.slug.current}`}>
                 <p className="t-title  bold  f6  f5-md  black  pt3  pb2">{item.name}</p>
               </Link>
             </article>

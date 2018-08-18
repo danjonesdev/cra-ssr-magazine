@@ -35,7 +35,7 @@ class Article extends Component {
           <div className="container-small  mla  mra  pa3  pa5-sm">
             <div className="flex  justify-center">
               <div className="col-22  col-20-sm  col-18-md  col-16-lg">
-                <AnimatedHeading type="h1" title={item.title} padding="pb3" fullWidth={false} styles="t-title  ttu  bold  f4  tal" />
+                <AnimatedHeading type="h1" title={item.title} padding="pb3" styles="t-title  ttu  bold  f4" />
                 <ArticleSections body={item.body} />
               </div>
             </div>

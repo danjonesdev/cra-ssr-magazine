@@ -10,7 +10,7 @@ class Homepage extends Component {
 
     return (
       <Page id="home" title="Home">
-        <AnimatedHeading type="h1" title="Home" padding="pt4  mt2" fullWidth={true} styles="t-title  ttu  bold  f5  tac" />
+        <AnimatedHeading type="h1" title="Home" padding="pt4  mt2" styles="t-title  ttu  bold  f5" />
         <ArticlesLatest {...this.props} padding="pt4  pb2" />
         <ArticlesGeneral {...this.props} padding="pt2  pb3" />
       </Page>

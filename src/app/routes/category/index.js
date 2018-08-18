@@ -10,7 +10,7 @@ class Category extends Component {
 
     return (
       <Page id="category" title={categoryTitle}>
-        <AnimatedHeading type="h1" title={this.props.match.params.id} padding="pt4  mt2" fullWidth={true} styles="t-title  ttu  bold  f5  tac" />
+        <AnimatedHeading type="h1" title={this.props.match.params.id} padding="pt4  mt2" styles="t-title  ttu  bold  f5" />
         <ArticlesCategory {...this.props} padding="pt4  pb2" />
       </Page>
     );

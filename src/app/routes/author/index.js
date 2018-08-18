@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {frontloadConnect} from 'react-frontload';
 
 import Page from '../../components/page';
+import AnimatedHeading from '../../elements/animated-heading';
 import AuthorComponent from '../../components/author'
 import ArticlesGrid from '../../components/articles-grid';
 
@@ -29,6 +30,7 @@ class Author extends Component {
     if (profile._id) {
       return (
         <Page id="author" title={profile.title} description={profile.title} image={profile.mainImage}>
+          <AnimatedHeading type="h1" title={profile.name} padding="pt4  mt2" styles="t-title  ttu  bold  f5" />
           <AuthorComponent profile={profile} padding="pt4  mt2" />
           <ArticlesGrid items={profile.articles} padding="pt4  pb2" />
         </Page>
