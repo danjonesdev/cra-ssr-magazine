@@ -26,7 +26,6 @@ class Article extends Component {
 
   render() {
     const item = this.props.currentProfile;
-    console.log(item);
 
     if (item._id) {
       return (

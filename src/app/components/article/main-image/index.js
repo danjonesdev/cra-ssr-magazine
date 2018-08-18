@@ -8,14 +8,14 @@ class MainImage extends Component {
 
     return (
       <React.Fragment>
-        <div className={`rel  ${padding}`}>
+        <figure className={`rel  ${padding}`}>
           <div className="article__hero__bg  abs">
         		<div className="w-100  h-100" style={{ backgroundImage: `url(${mainImage})` }} />
         	</div>
           <div className="pt4">
             <AnimatedImage lazy={false} src={mainImage} alt={alt} styles="article__hero__img  mla  mra" />
           </div>
-        </div>
+        </figure>
       </React.Fragment>
     );
   }
