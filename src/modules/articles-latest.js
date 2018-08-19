@@ -18,7 +18,7 @@ export default(state = initialState, action) => {
 
 export const getCurrentProfiles = id => dispatch => new Promise(resolve => {
   const query =
-  `*[_type == "post"] | order(publishedAt desc) [0..3] {
+  `*[_type == "post"] | order(publishedAt desc) [0..4] {
     ...,
     author->,
     category->,

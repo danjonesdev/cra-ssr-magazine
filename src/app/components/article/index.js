@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import Para from '../../components/article/para';
 import Bullet from '../../components/article/bullet';
 import Number from '../../components/article/number';
-import SoundCloud from '../../components/article/soundcloud';
-import Spotify from '../../components/article/spotify';
+import SoundCloudEmbed from '../../components/article/soundcloud-embed';
+import SpotifyEmbed from '../../components/article/spotify-embed';
 import YouTubeEmbed from '../../components/article/youtube-embed';
 import FacebookVideoEmbed from '../../components/article/facebook-video-embed';
 
@@ -43,7 +43,7 @@ class ArticleSections extends Component {
     if (section._type === 'soundCloudEmbedBlock') {
       return (
         <div key={i} className="pv4">
-          <SoundCloud soundCloudEmbed={section.soundCloudEmbed} />
+          <SoundCloudEmbed soundCloudEmbed={section.soundCloudEmbed} />
         </div>
       );
     }
@@ -52,7 +52,7 @@ class ArticleSections extends Component {
     if (section._type === 'spotifyEmbedBlock') {
       return (
         <div key={i} className="pv4">
-          <Spotify spotifyEmbed={section.spotifyEmbed} />
+          <SpotifyEmbed spotifyEmbed={section.spotifyEmbed} />
         </div>
       );
     }

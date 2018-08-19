@@ -4,31 +4,27 @@ import { Link } from 'react-router-dom';
 const links = [
   {
     to: '/',
-    text: 'Homepage'
-  },
-  {
-    to: '/about',
-    text: 'About'
+    text: 'Home'
   },
   {
     to: '/authors',
     text: 'Authors'
   },
   {
-    to: '/author/dan-jones',
-    text: 'dan jones'
+    to: '/about',
+    text: 'About'
   },
   {
-    to: '/category/insights',
-    text: 'cat insights'
+    to: '/category/Insights',
+    text: 'Insights'
   },
   {
-    to: '/article/example-article-1',
-    text: 'example article 1'
+    to: '/category/news',
+    text: 'News'
   },
   {
-    to: '/this-is-broken',
-    text: 'Broken Page'
+    to: '/category/interviews',
+    text: 'interviews'
   }
 ];
 
@@ -50,7 +46,7 @@ const HeaderLink = ({ to, text, current }) => (
 
 export default ({ isAuthenticated, current }) => (
   <header id="header">
-    <nav className="bb  bc-light-grey  shadow1  pv2">
+    <nav className="bb  bc-light-grey  shadow1  pb3  pt1  z9">
       <ul className="tac  mla  lra" id="links">
         {links.map((link, index) => {
           const TheLink = <HeaderLink key={index} current={current} {...link} />;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Iframe from 'react-iframe'
 
-class SoundCloud extends Component {
+class SoundCloudEmbed extends Component {
   render() {
     const { soundCloudEmbed } = this.props;
 
@@ -21,4 +21,4 @@ class SoundCloud extends Component {
   }
 }
 
-export default SoundCloud;
+export default SoundCloudEmbed;

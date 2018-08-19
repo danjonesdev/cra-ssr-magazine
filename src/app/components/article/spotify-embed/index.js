@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SpotifyPlayer from 'react-spotify-player';
 
-class Spotify extends Component {
+class SpotifyEmbed extends Component {
   render() {
     const { spotifyEmbed } = this.props;
     const size = { width: '100%', height: 300, };
@@ -21,4 +21,4 @@ class Spotify extends Component {
   }
 }
 
-export default Spotify;
+export default SpotifyEmbed;
