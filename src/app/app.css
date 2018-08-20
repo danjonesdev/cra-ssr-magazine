@@ -446,6 +446,10 @@ h6 {
 p {
   margin: 0; }
 
+ul, ol {
+  margin: 0;
+  padding: 0; }
+
 figure {
   margin: 0; }
 
@@ -4229,8 +4233,39 @@ var {
   to {
     opacity: 1; } }
 
-nav {
+.header {
   height: 60px; }
+
+.header__logo {
+  top: 5px;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+  @media screen and (min-width: 950px) {
+    .header__logo {
+      left: 15px;
+      right: auto;
+      margin: auto; } }
+
+.header__menuOpen {
+  left: 15px;
+  top: 18px; }
+
+.header__menuClose {
+  right: 15px;
+  top: 18px; }
+
+.nav__mobile {
+  width: 50%;
+  min-height: 100vh;
+  transform: translateX(-100vw);
+  transition: transform 0.5s ease-in-out; }
+
+.nav__mobile.is-active {
+  transform: translateX(0); }
+
+.nav__mobile__list {
+  top: 45px; }
 
 .trans-all-1 {
   transition: all ease-in-out 0.5s; }
