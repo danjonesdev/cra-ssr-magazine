@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import Page from '../../components/page'
 import AnimatedHeading from '../../elements/animated-heading';
-import AuthorsWorker from '../../workers/authors';
+import AuthorsWorker from '../../reusable-workers/authors';
 
 class Authors extends Component {
   render() {

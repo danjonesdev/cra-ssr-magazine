@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 
 import Page from '../../components/page'
 import AnimatedHeading from '../../elements/animated-heading';
-import ArticlesLatest from '../../workers/articles-latest';
-import ArticlesGeneral from '../../workers/articles-general';
+import ArticlesLatest from '../../reusable-workers/articles-latest';
+import ArticlesGeneral from '../../reusable-workers/articles-general';
 
 class Homepage extends Component {
   render() {
