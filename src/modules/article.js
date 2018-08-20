@@ -18,7 +18,7 @@ export default(state = initialState, action) => {
   }
 };
 
-export const getCurrentProfile = id => dispatch => new Promise(resolve => {
+export const getCurrentSubject = id => dispatch => new Promise(resolve => {
   const query =
   `*[_type == "post" && slug.current == $id][0] {
     ...,
@@ -37,7 +37,7 @@ export const getCurrentProfile = id => dispatch => new Promise(resolve => {
   })
 });
 
-export const removeCurrentProfile = () => dispatch => new Promise(resolve => {
+export const removeCurrentSubject = () => dispatch => new Promise(resolve => {
   dispatch({type: ARTICLE, article: {}});
   resolve({});
 });

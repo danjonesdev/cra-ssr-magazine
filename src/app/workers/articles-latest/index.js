@@ -4,20 +4,20 @@ import {connect} from 'react-redux';
 
 import ArticlesCarousel from '../../components/articles-carousel';
 
-import {getCurrentProfiles, removeCurrentProfiles} from '../../../modules/articles-latest';
+import {getCurrentSubject, removeCurrentSubjects} from '../../../modules/articles-latest';
 
 class ArticlesLatest extends Component {
   componentDidMount(nextProps) {
-    this.props.getCurrentProfiles(nextProps);
+    this.props.getCurrentSubject(nextProps);
   }
 
   componentWillUnmount() {
-    this.props.removeCurrentProfiles();
+    this.props.removeCurrentSubjects();
   }
 
   shouldComponentUpdate(nextProps) {
     if (nextProps.match.path !== this.props.match.path) {
-      this.props.getCurrentProfiles(nextProps);
+      this.props.getCurrentSubject(nextProps);
     }
     return true;
   }
@@ -32,6 +32,6 @@ class ArticlesLatest extends Component {
 }
 
 const mapStateToProps = state => ({currentProfiles: state.articlesLatest.currentProfiles});
-const mapDispatchToProps = dispatch => bindActionCreators({getCurrentProfiles, removeCurrentProfiles}, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({getCurrentSubject, removeCurrentSubjects}, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(ArticlesLatest);

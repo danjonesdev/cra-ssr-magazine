@@ -8,18 +8,18 @@ import MainImage from '../../components/article/main-image'
 import AnimatedHeading from '../../elements/animated-heading';
 import ArticleSections from '../../components/article'
 
-import {getCurrentProfile, removeCurrentProfile} from '../../../modules/article';
+import {getCurrentSubject, removeCurrentSubject} from '../../../modules/article';
 
-const frontload = async props => await props.getCurrentProfile(props.match.params.id);
+const frontload = async props => await props.getCurrentSubject(props.match.params.id);
 
 class Article extends Component {
   componentWillUnmount() {
-    this.props.removeCurrentProfile();
+    this.props.removeCurrentSubject();
   }
 
   shouldComponentUpdate(nextProps) {
     if (nextProps.match.params.id !== this.props.match.params.id) {
-      this.props.getCurrentProfile(nextProps.match.params.id);
+      this.props.getCurrentSubject(nextProps.match.params.id);
     }
     return true;
   }
@@ -50,8 +50,8 @@ class Article extends Component {
 const mapStateToProps = state => ({currentProfile: state.article.currentProfile});
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  getCurrentProfile,
-  removeCurrentProfile
+  getCurrentSubject,
+  removeCurrentSubject
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(frontloadConnect(frontload, {

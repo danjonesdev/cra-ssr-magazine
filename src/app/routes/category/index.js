@@ -7,18 +7,18 @@ import Page from '../../components/page';
 import AnimatedHeading from '../../elements/animated-heading';
 import ArticlesGrid from '../../components/articles-grid';
 
-import {getCurrentProfiles, removeCurrentProfiles} from '../../../modules/category';
+import {getCurrentSubject, removeCurrentSubjects} from '../../../modules/category';
 
-const frontload = async props => await props.getCurrentProfiles(props.match.params.id);
+const frontload = async props => await props.getCurrentSubject(props.match.params.id);
 
 class Article extends Component {
   componentWillUnmount() {
-    this.props.removeCurrentProfiles();
+    this.props.removeCurrentSubjects();
   }
 
   shouldComponentUpdate(nextProps) {
     if (nextProps.match.params.id !== this.props.match.params.id) {
-      this.props.getCurrentProfiles(nextProps.match.params.id);
+      this.props.getCurrentSubject(nextProps.match.params.id);
     }
     return true;
   }
@@ -41,8 +41,8 @@ class Article extends Component {
 const mapStateToProps = state => ({currentProfiles: state.category.currentProfiles});
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  getCurrentProfiles,
-  removeCurrentProfiles
+  getCurrentSubject,
+  removeCurrentSubjects
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(frontloadConnect(frontload, {

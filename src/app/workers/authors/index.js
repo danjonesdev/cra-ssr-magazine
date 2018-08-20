@@ -4,20 +4,20 @@ import {connect} from 'react-redux';
 
 import AuthorsGrid from '../../components/authors-grid';
 
-import {getCurrentProfiles, removeCurrentProfiles} from '../../../modules/authors';
+import {getCurrentSubject, removeCurrentSubjects} from '../../../modules/authors';
 
 class Articlesgeneral extends Component {
   componentDidMount(nextProps) {
-    this.props.getCurrentProfiles(nextProps);
+    this.props.getCurrentSubject(nextProps);
   }
 
   componentWillUnmount() {
-    this.props.removeCurrentProfiles();
+    this.props.removeCurrentSubjects();
   }
 
   shouldComponentUpdate(nextProps) {
     if (nextProps.match.path !== this.props.match.path) {
-      this.props.getCurrentProfiles(nextProps);
+      this.props.getCurrentSubject(nextProps);
     }
     return true;
   }
@@ -32,6 +32,6 @@ class Articlesgeneral extends Component {
 }
 
 const mapStateToProps = state => ({currentProfiles: state.authors.currentProfiles});
-const mapDispatchToProps = dispatch => bindActionCreators({getCurrentProfiles, removeCurrentProfiles}, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({getCurrentSubject, removeCurrentSubjects}, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Articlesgeneral);

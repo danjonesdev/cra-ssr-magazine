@@ -16,7 +16,7 @@ export default(state = initialState, action) => {
   }
 };
 
-export const getCurrentProfiles = id => dispatch => new Promise(resolve => {
+export const getCurrentSubject = id => dispatch => new Promise(resolve => {
   const query =
   `*[_type == "post"] | order(publishedAt desc) [0..4] {
     ...,
@@ -31,7 +31,7 @@ export const getCurrentProfiles = id => dispatch => new Promise(resolve => {
   })
 });
 
-export const removeCurrentProfiles = () => dispatch => new Promise(resolve => {
+export const removeCurrentSubjects = () => dispatch => new Promise(resolve => {
   dispatch({type: LATEST_ARTICLES, articlesLatest: {}});
   resolve({});
 });

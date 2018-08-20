@@ -8,18 +8,18 @@ import AnimatedHeading from '../../elements/animated-heading';
 import AuthorComponent from '../../components/author'
 import ArticlesGrid from '../../components/articles-grid';
 
-import {getCurrentProfile, removeCurrentProfile} from '../../../modules/author';
+import {getCurrentSubject, removeCurrentSubject} from '../../../modules/author';
 
-const frontload = async props => await props.getCurrentProfile(props.match.params.id);
+const frontload = async props => await props.getCurrentSubject(props.match.params.id);
 
 class Author extends Component {
   componentWillUnmount() {
-    this.props.removeCurrentProfile();
+    this.props.removeCurrentSubject();
   }
 
   shouldComponentUpdate(nextProps) {
     if (nextProps.match.params.id !== this.props.match.params.id) {
-      this.props.getCurrentProfile(nextProps.match.params.id);
+      this.props.getCurrentSubject(nextProps.match.params.id);
     }
     return true;
   }
@@ -43,8 +43,8 @@ class Author extends Component {
 const mapStateToProps = state => ({currentProfile: state.author.currentProfile});
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  getCurrentProfile,
-  removeCurrentProfile
+  getCurrentSubject,
+  removeCurrentSubject
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(frontloadConnect(frontload, {
