@@ -1,15 +1,15 @@
 import sanity from './sanity'
 
-export const CATEGORY_ARTICLES = 'auth/CATEGORY_ARTICLES';
+export const CATEGORY = 'auth/CATEGORY';
 
 const initialState = { currentProfiles: {} };
 
 export default(state = initialState, action) => {
   switch (action.type) {
-    case CATEGORY_ARTICLES:
+    case CATEGORY:
       return {
         ...state,
-        currentProfiles: action.articlesCategory
+        currentProfiles: action.category
       };
     default:
       return state;
@@ -33,14 +33,13 @@ export const getCurrentProfiles = id => dispatch => new Promise(resolve => {
     id: id
   };
 
-  sanity.fetch(query, params).then(data => {
-    const articlesCategory = data.posts;
-    dispatch({type: CATEGORY_ARTICLES, articlesCategory});
-    resolve(articlesCategory);
+  sanity.fetch(query, params).then(category => {
+    dispatch({type: CATEGORY, category});
+    resolve(category);
   })
 });
 
 export const removeCurrentProfiles = () => dispatch => new Promise(resolve => {
-  dispatch({type: CATEGORY_ARTICLES, articlesCategory: {}});
+  dispatch({type: CATEGORY, category: {}});
   resolve({});
 });
