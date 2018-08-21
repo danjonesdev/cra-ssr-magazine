@@ -34,7 +34,7 @@
   width: 70%;
   min-height: 100vh;
   transform: translateX(-100vw);
-  transition: transform 0.7s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .nav__mobile.is-active {
@@ -56,11 +56,16 @@
 @for $i from 1 through 10 {
   .nav__mobile > .nav__mobile__list > li:nth-child(#{$i}) {
     transform: translateX(-100vw);
-    transition: transform 0.7s ease-in-out;
-    transition-delay: #{$i * .1}s
+    transition: transform 0.5s ease-in-out;
+    transition-delay: #{$i * .1}s;
   }
 }
 
 .nav__mobile.is-active > .nav__mobile__list > li {
   transform: translateX(0);
+}
+
+.nav__mobile__list__arrowRight {
+  right: 15px;
+  bottom: 15px;
 }

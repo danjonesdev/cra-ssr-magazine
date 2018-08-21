@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import classNames  from 'classnames';
 
 import logo from '../assets/logo-small.png';
+import { ArrowRight } from '../assets/svg';
 
 class Header extends Component {
   constructor(props) {
@@ -71,8 +72,8 @@ class Header extends Component {
             <ul className="tac  mla  mra  pt3" id="links">
               {links.map((link, index) => {
                 return (
-                  <li className="di">
-                    <Link key={index} className={`di  t-title  f5  bold  ph2  link  ${isCurrent(link.to, current) ? 'mid-grey' : 'black'}`} to={link.to}>
+                  <li key={index} className="di">
+                    <Link className={`di  t-title  f5  bold  ph2  link  ${isCurrent(link.to, current) ? 'mid-grey' : 'black'}`} to={link.to}>
                       {link.text}
                     </Link>
                   </li>
@@ -100,9 +101,12 @@ class Header extends Component {
             <ul className="tal  abs  w-100  nav__mobile__list" id="links">
               {links.map((link, index) => {
                 return (
-                  <li className="db  pv3  bb  bc-light-grey">
-                    <Link key={index} className={`db  t-title  f4  f5-md  bold  ph3  link  ${isCurrent(link.to, current) ? 'mid-grey' : 'black'}`} to={link.to}>
+                  <li key={index} className="db  pv3  bb  bc-light-grey">
+                    <Link onClick={this.toggleMobileNav} className={`db  t-title  f4  f5-md  bold  ph3  link  ${isCurrent(link.to, current) ? 'mid-grey' : 'black'}`} to={link.to}>
                       {link.text}
+                      <div  className="abs  w1  nav__mobile__list__arrowRight">
+                        <ArrowRight />
+                      </div>
                     </Link>
                   </li>
                 );
