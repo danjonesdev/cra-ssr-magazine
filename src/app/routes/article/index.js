@@ -35,13 +35,17 @@ class Article extends Component {
 
           <div className="container-medium  mla  mra  pa3  pa5-sm">
             <div className="flex  flex-wrap  justify-center">
-              <div className="col-18  col-20-sm  col-18-md  col-16-lg  pr5-md">
+              <div className="col-18  col-20-sm  col-18-md  col-15-lg  pr5-md">
                 <AnimatedHeading type="h1" title={item.title} padding="pt2  pb2" styles="t-title  ttu  bold  f4" article={true} />
                 <ArticleSections body={item.body} />
               </div>
-              <div className="col-24  col-7-md">
-                <p className="t-title  f5  black  pt2  pb2">Latest Articles</p>
-                <ArticlesGeneral {...this.props} limitFrom={4} limitTo={24} type="list" padding="pt2  pb3" />
+              <div className="col-24  col-7-lg">
+                <p className="t-title  f5  black  pl2  pt2  pb2">New</p>
+                <ArticlesGeneral {...this.props} limitFrom={0} limitTo={3} type="list" padding="pt2  pb3" />
+                  <p className="t-title  f5  black  pl2  pt2  pb2">Latest Insights</p>
+                <ArticlesGeneral {...this.props} limitFrom={0} limitTo={3} type="list" padding="pt2  pb3" />
+                  <p className="t-title  f5  black  pl2  pt2  pb2">More from Dan</p>
+                <ArticlesGeneral {...this.props} limitFrom={0} limitTo={3} type="list" padding="pt2  pb3" />
               </div>
             </div>
           </div>
