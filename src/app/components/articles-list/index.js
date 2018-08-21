@@ -21,9 +21,9 @@ class ArticlesList extends Component {
                 </figure>
               </div>
 
-              <div className="col-18  ph3  pt2">
+              <div className="col-18  ph2  pt2">
                 <Link className="link" to={`/article/${item.slug.current}`}>
-                  <p className="t-title  bold  f6  f5-md  black  pt1  pb2">{item.title}</p>
+                  <p className="t-title  f6  f5-md  black  pt1  pb2">{item.title}</p>
                 </Link>
               </div>
             </article>

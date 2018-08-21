@@ -40,11 +40,9 @@ class Article extends Component {
                 <ArticleSections body={item.body} />
               </div>
               <div className="col-24  col-7-lg">
-                <p className="t-title  f5  black  pl2  pt2  pb2">New</p>
+                <p className="t-title  f5  black  pl2  pt2  pb2">Latest</p>
                 <ArticlesGeneral {...this.props} limitFrom={0} limitTo={3} type="list" padding="pt2  pb3" />
-                  <p className="t-title  f5  black  pl2  pt2  pb2">Latest Insights</p>
-                <ArticlesGeneral {...this.props} limitFrom={0} limitTo={3} type="list" padding="pt2  pb3" />
-                  <p className="t-title  f5  black  pl2  pt2  pb2">More from Dan</p>
+                <p className="t-title  f5  black  pl2  pt2  pb2">More from Dan</p>
                 <ArticlesGeneral {...this.props} limitFrom={0} limitTo={3} type="list" padding="pt2  pb3" />
               </div>
             </div>
