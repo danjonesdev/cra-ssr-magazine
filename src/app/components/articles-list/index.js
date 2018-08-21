@@ -20,7 +20,7 @@ class ArticlesList extends Component {
               </figure>
             </div>
 
-            <div className="col-16  ph2">
+            <div className="col-16  ph3">
               <div className="pt2  mt2">
                 <address className="t-body  f6  mid-grey  dib">{item.author.name}</address>
                 <span className="t-body  f6  mid-grey  dib  ph1">|</span>
