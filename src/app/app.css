@@ -718,6 +718,90 @@ var {
 .pen {
   pointer-events: none; }
 
+body {
+  outline: 1px solid #2980b9 !important; }
+
+article {
+  outline: 1px solid #3498db !important; }
+
+nav {
+  outline: 1px solid #0088c3 !important; }
+
+aside {
+  outline: 1px solid #33a0ce !important; }
+
+section {
+  outline: 1px solid #66b8da !important; }
+
+header {
+  outline: 1px solid #99cfe7 !important; }
+
+footer {
+  outline: 1px solid #cce7f3 !important; }
+
+main {
+  outline: 1px solid #2f4f90 !important; }
+
+address {
+  outline: 1px solid #1a2c51 !important; }
+
+div {
+  outline: 1px solid #036cdb !important; }
+
+h1 {
+  outline: 1px solid #162544 !important; }
+
+h2 {
+  outline: 1px solid #314e6e !important; }
+
+h3 {
+  outline: 1px solid #3e5e85 !important; }
+
+h4 {
+  outline: 1px solid #449baf !important; }
+
+h5 {
+  outline: 1px solid #c7d1cb !important; }
+
+h6 {
+  outline: 1px solid #4371d0 !important; }
+
+p {
+  outline: 1px solid #ac050b !important; }
+
+hr {
+  outline: 1px solid #ff063f !important; }
+
+pre {
+  outline: 1px solid #850440 !important; }
+
+blockquote {
+  outline: 1px solid #f1b8e7 !important; }
+
+ol {
+  outline: 1px solid #ff050c !important; }
+
+ul {
+  outline: 1px solid #d90416 !important; }
+
+li {
+  outline: 1px solid #d90416 !important; }
+
+dl {
+  outline: 1px solid #fd3427 !important; }
+
+dt {
+  outline: 1px solid #ff0043 !important; }
+
+dd {
+  outline: 1px solid #e80174 !important; }
+
+figure {
+  outline: 1px solid #ff00bb !important; }
+
+figcaption {
+  outline: 1px solid #bf0032 !important; }
+
 .dn {
   display: none; }
 
@@ -4279,52 +4363,52 @@ var {
 .nav__mobile > .nav__mobile__list > li:nth-child(1) {
   transform: translateX(-100vw);
   transition: transform 0.5s ease-in-out;
-  transition-delay: 0.1s; }
+  transition-delay: 0.05s; }
 
 .nav__mobile > .nav__mobile__list > li:nth-child(2) {
   transform: translateX(-100vw);
   transition: transform 0.5s ease-in-out;
-  transition-delay: 0.2s; }
+  transition-delay: 0.1s; }
 
 .nav__mobile > .nav__mobile__list > li:nth-child(3) {
   transform: translateX(-100vw);
   transition: transform 0.5s ease-in-out;
-  transition-delay: 0.3s; }
+  transition-delay: 0.15s; }
 
 .nav__mobile > .nav__mobile__list > li:nth-child(4) {
   transform: translateX(-100vw);
   transition: transform 0.5s ease-in-out;
-  transition-delay: 0.4s; }
+  transition-delay: 0.2s; }
 
 .nav__mobile > .nav__mobile__list > li:nth-child(5) {
   transform: translateX(-100vw);
   transition: transform 0.5s ease-in-out;
-  transition-delay: 0.5s; }
+  transition-delay: 0.25s; }
 
 .nav__mobile > .nav__mobile__list > li:nth-child(6) {
   transform: translateX(-100vw);
   transition: transform 0.5s ease-in-out;
-  transition-delay: 0.6s; }
+  transition-delay: 0.3s; }
 
 .nav__mobile > .nav__mobile__list > li:nth-child(7) {
   transform: translateX(-100vw);
   transition: transform 0.5s ease-in-out;
-  transition-delay: 0.7s; }
+  transition-delay: 0.35s; }
 
 .nav__mobile > .nav__mobile__list > li:nth-child(8) {
   transform: translateX(-100vw);
   transition: transform 0.5s ease-in-out;
-  transition-delay: 0.8s; }
+  transition-delay: 0.4s; }
 
 .nav__mobile > .nav__mobile__list > li:nth-child(9) {
   transform: translateX(-100vw);
   transition: transform 0.5s ease-in-out;
-  transition-delay: 0.9s; }
+  transition-delay: 0.45s; }
 
 .nav__mobile > .nav__mobile__list > li:nth-child(10) {
   transform: translateX(-100vw);
   transition: transform 0.5s ease-in-out;
-  transition-delay: 1s; }
+  transition-delay: 0.5s; }
 
 .nav__mobile.is-active > .nav__mobile__list > li {
   transform: translateX(0); }

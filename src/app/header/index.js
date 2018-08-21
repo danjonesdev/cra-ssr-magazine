@@ -58,7 +58,7 @@ class Header extends Component {
       return false;
     };
 
-    const navMobileClass = classNames('nav__mobile  abs  bg-white  br  bc-light-grey  shadow2  z9  db  dn-md', {
+    const navMobileClass = classNames('nav__mobile  abs  bg-white  br  bc-light-grey  shadow3  z9  db  dn-md', {
       'is-active': this.state.mobileNavActive,
     });
 
@@ -67,9 +67,9 @@ class Header extends Component {
         <img className="header__logo  w3  abs" src={logo} alt="Rendah" />
 
         {/* Desktop */}
-        <header id="header-desktop" className="header  bb  bc-light-grey  shadow2  pb3  pt1  z9  dn  db-md">
+        <header id="header-desktop" className="header  bb  bc-light-grey  shadow1  pb3  pt1  z9  dn  db-md">
           <nav className="container-large  mla  mra  rel  nav__desktop">
-            <ul className="tac  mla  mra  pt3" id="links">
+            <ul className="tac  mla  mra  pt3  mt2" id="links">
               {links.map((link, index) => {
                 return (
                   <li key={index} className="di">
@@ -84,7 +84,7 @@ class Header extends Component {
         </header>
 
         {/* Mobile */}
-        <header id="header-mobile" className="header  bb  bc-light-grey  shadow2  pb3  pt1  z9  db  dn-md">
+        <header id="header-mobile" className="header  bb  bc-light-grey  shadow1  pb3  pt1  z9  db  dn-md">
           <div onClick={this.toggleMobileNav} className="abs  header__menuOpen">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>

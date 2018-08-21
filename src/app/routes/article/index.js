@@ -7,6 +7,7 @@ import Page from '../../components/page';
 import MainImage from '../../components/article/main-image'
 import AnimatedHeading from '../../elements/animated-heading';
 import ArticleSections from '../../components/article'
+import ArticlesGeneral from '../../reusable-workers/articles-general';
 
 import {getCurrentSubject, removeCurrentSubject} from '../../../modules/article';
 
@@ -32,11 +33,15 @@ class Article extends Component {
         <Page id="article" title={item.title} description={item.description} image={item.mainImage}>
           <MainImage mainImage={item.mainImage} alt={item.title} padding="pb3" />
 
-          <div className="container-small  mla  mra  pa3  pa5-sm">
-            <div className="flex  justify-center">
-              <div className="col-22  col-20-sm  col-18-md  col-16-lg">
-                <AnimatedHeading type="h1" title={item.title} padding="pb3" styles="t-title  ttu  bold  f4" />
+          <div className="container-medium  mla  mra  pa3  pa5-sm">
+            <div className="flex  flex-wrap  justify-center">
+              <div className="col-18  col-20-sm  col-18-md  col-16-lg  pr5-md">
+                <AnimatedHeading type="h1" title={item.title} padding="pt2  pb2" styles="t-title  ttu  bold  f4" article={true} />
                 <ArticleSections body={item.body} />
+              </div>
+              <div className="col-24  col-7-md">
+                <p className="t-title  f5  black  pt2  pb2">Latest Articles</p>
+                <ArticlesGeneral {...this.props} type="list" padding="pt2  pb3" />
               </div>
             </div>
           </div>

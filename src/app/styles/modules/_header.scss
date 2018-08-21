@@ -57,7 +57,7 @@
   .nav__mobile > .nav__mobile__list > li:nth-child(#{$i}) {
     transform: translateX(-100vw);
     transition: transform 0.5s ease-in-out;
-    transition-delay: #{$i * .1}s;
+    transition-delay: #{$i * .05}s;
   }
 }
 

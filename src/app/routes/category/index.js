@@ -30,7 +30,7 @@ class Article extends Component {
       return (
         <Page id={category.slug.current} title={category.title} description={category.description} image="{item.mainImage}">
           <AnimatedHeading type="h1" title={category.title} padding="pt4  mt2" styles="t-title  ttu  bold  f5" />
-          <ArticlesGrid items={category.posts} padding="pt4  pb2" />
+          <ArticlesGrid items={category.posts} type="grid" padding="pt4  pb2" />
         </Page>
       );
     }

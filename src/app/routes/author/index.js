@@ -32,7 +32,7 @@ class Author extends Component {
         <Page id="author" title={profile.title} description={profile.title} image={profile.mainImage}>
           <AnimatedHeading type="h1" title={profile.name} padding="pt4  mt2" styles="t-title  ttu  bold  f5" />
           <AuthorComponent profile={profile} padding="pt4  mt2" />
-          <ArticlesGrid items={profile.articles} padding="pt4  pb2" />
+          <ArticlesGrid items={profile.articles} type="grid" padding="pt4  pb2" />
         </Page>
       );
     }
