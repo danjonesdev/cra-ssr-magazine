@@ -11,8 +11,8 @@ class Homepage extends Component {
     return (
       <Page id="home" title="Home">
         <AnimatedHeading type="h1" title="Home" padding="pt4  mt2" styles="t-title  ttu  bold  f5" />
-        <ArticlesLatest {...this.props} padding="pt4  pb2" />
-        <ArticlesGeneral {...this.props} type="grid" padding="pt2  pb3" />
+        <ArticlesLatest {...this.props} limitFrom={0} limitTo={3} padding="pt4  pb2" />
+        <ArticlesGeneral {...this.props} limitFrom={4} limitTo={24} type="grid" padding="pt2  pb3" />
       </Page>
     );
   }

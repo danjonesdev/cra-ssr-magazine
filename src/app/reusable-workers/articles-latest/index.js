@@ -7,8 +7,8 @@ import ArticlesCarousel from '../../components/articles-carousel';
 import {getCurrentSubject, removeCurrentSubjects} from '../../../modules/articles-latest';
 
 class ArticlesLatest extends Component {
-  componentDidMount(nextProps) {
-    this.props.getCurrentSubject(nextProps);
+  componentDidMount() {
+    this.props.getCurrentSubject({ limitFrom: this.props.limitFrom, limitTo: this.props.limitTo });
   }
 
   componentWillUnmount() {
@@ -17,7 +17,7 @@ class ArticlesLatest extends Component {
 
   shouldComponentUpdate(nextProps) {
     if (nextProps.match.path !== this.props.match.path) {
-      this.props.getCurrentSubject(nextProps);
+      this.props.getCurrentSubject({ limitFrom: this.props.limitFrom, limitTo: this.props.limitTo });
     }
     return true;
   }

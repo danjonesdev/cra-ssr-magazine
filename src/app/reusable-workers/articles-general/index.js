@@ -8,8 +8,8 @@ import ArticlesList from '../../components/articles-list';
 import {getCurrentSubject, removeCurrentSubjects} from '../../../modules/articles-general';
 
 class Articlesgeneral extends Component {
-  componentDidMount(nextProps) {
-    this.props.getCurrentSubject(nextProps);
+  componentDidMount() {
+    this.props.getCurrentSubject({ limitFrom: this.props.limitFrom, limitTo: this.props.limitTo });
   }
 
   componentWillUnmount() {
@@ -18,7 +18,7 @@ class Articlesgeneral extends Component {
 
   shouldComponentUpdate(nextProps) {
     if (nextProps.match.path !== this.props.match.path) {
-      this.props.getCurrentSubject(nextProps);
+      this.props.getCurrentSubject({ limitFrom: this.props.limitFrom, limitTo: this.props.limitTo });
     }
     return true;
   }

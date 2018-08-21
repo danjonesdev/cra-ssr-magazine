@@ -41,7 +41,7 @@ class Article extends Component {
               </div>
               <div className="col-24  col-7-md">
                 <p className="t-title  f5  black  pt2  pb2">Latest Articles</p>
-                <ArticlesGeneral {...this.props} type="list" padding="pt2  pb3" />
+                <ArticlesGeneral {...this.props} limitFrom={4} limitTo={24} type="list" padding="pt2  pb3" />
               </div>
             </div>
           </div>

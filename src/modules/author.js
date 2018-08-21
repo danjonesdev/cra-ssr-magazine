@@ -24,7 +24,7 @@ export const getCurrentSubject = id => dispatch => new Promise(resolve => {
     ...,
     author->,
     "image": image.asset->url,
-    "articles": *[_type == "post" && references(^._id)] {
+    "articles": *[_type == "post" && references(^._id)] [0..23] {
       ...,
       "mainImage": mainImage.asset->url,
     }

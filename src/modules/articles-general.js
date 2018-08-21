@@ -16,9 +16,13 @@ export default(state = initialState, action) => {
   }
 };
 
-export const getCurrentSubject = id => dispatch => new Promise(resolve => {
+export const getCurrentSubject = props => dispatch => new Promise(resolve => {
+  const params = {
+    limit: `${props.limitFrom}..${props.limitTo}`
+  };
+
   const query =
-  `*[_type == "post"] | order(publishedAt desc) [4..24] {
+  `*[_type == "post"] | order(publishedAt desc) [${params.limit}] {
     ...,
     author->,
     category->,

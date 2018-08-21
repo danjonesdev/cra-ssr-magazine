@@ -18,15 +18,15 @@ export default(state = initialState, action) => {
 
 export const getCurrentSubject = id => dispatch => new Promise(resolve => {
   const query =
-  `*[_type == "category" && slug.current == $id] {
+  `*[_type == "category" && slug.current == $id] [0] {
       ...,
-      "posts": *[_type == "post" && references(^._id)] {
+      "posts": *[_type == "post" && references(^._id)] [0..23] {
         ...,
         author->,
         category->,
         "mainImage": mainImage.asset->url,
       }
-    }[0]
+    }
   `;
 
   const params = {
