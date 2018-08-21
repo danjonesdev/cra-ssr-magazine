@@ -29,8 +29,18 @@ class Article extends Component {
     if (category._id) {
       return (
         <Page id={category.slug.current} title={category.title} description={category.description} image="{item.mainImage}">
-          <AnimatedHeading type="h1" title={category.title} padding="pt4  mt2" styles="t-title  ttu  bold  f5" />
-          <ArticlesGrid items={category.posts} type="grid" padding="pt4  pb2" />
+          <AnimatedHeading
+            type="h1"
+            title={category.title}
+            padding="pt4  mt2"
+            styles="t-title  ttu  bold  f5"
+          />
+
+          <ArticlesGrid
+            items={category.posts}
+            type="grid"
+            padding="pt4  pb2"
+          />
         </Page>
       );
     }

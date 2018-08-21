@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import ArticlesCarousel from '../../components/articles-carousel';
+import ArticlesGrid from '../../components/articles-grid';
+import ArticlesList from '../../components/articles-list';
+import ArticleCarousel from '../../components/articles-carousel';
 
 import {getCurrentSubject, removeCurrentSubjects} from '../../../modules/articles-latest';
 
@@ -26,7 +28,9 @@ class ArticlesLatest extends Component {
     const items = this.props.currentProfiles;
     const { padding } = this.props;
 
-    if (items.length) return <ArticlesCarousel items={items} padding={padding} />;
+    if (items.length && type === 'grid') return <ArticlesGrid items={items} padding={padding} />;
+    if (items.length && type === 'list') return <ArticlesList items={items} padding={padding} />;
+    if (items.length && type === 'carousel') return <ArticleCarousel items={items} padding={padding} />;
     return false;
   }
 }

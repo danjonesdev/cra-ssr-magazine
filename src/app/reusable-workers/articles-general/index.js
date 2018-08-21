@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 
 import ArticlesGrid from '../../components/articles-grid';
 import ArticlesList from '../../components/articles-list';
+import ArticleCarousel from '../../components/articles-carousel';
 
 import {getCurrentSubject, removeCurrentSubjects} from '../../../modules/articles-general';
 
@@ -30,6 +31,7 @@ class Articlesgeneral extends Component {
 
     if (items.length && type === 'grid') return <ArticlesGrid items={items} padding={padding} />;
     if (items.length && type === 'list') return <ArticlesList items={items} padding={padding} />;
+    if (items.length && type === 'carousel') return <ArticleCarousel items={items} padding={padding} />;
     return false;
   }
 }
