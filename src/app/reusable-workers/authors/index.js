@@ -1,10 +1,13 @@
-import React, {Component} from 'react';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 import AuthorsGrid from '../../components/authors-grid';
 
-import {getCurrentSubject, removeCurrentSubjects} from '../../../modules/authors';
+import {
+  getCurrentSubject,
+  removeCurrentSubjects,
+} from '../../../modules/authors';
 
 class Articlesgeneral extends Component {
   componentDidMount(nextProps) {
@@ -31,7 +34,13 @@ class Articlesgeneral extends Component {
   }
 }
 
-const mapStateToProps = state => ({currentProfiles: state.authors.currentProfiles});
-const mapDispatchToProps = dispatch => bindActionCreators({getCurrentSubject, removeCurrentSubjects}, dispatch);
+const mapStateToProps = state => ({
+  currentProfiles: state.authors.currentProfiles,
+});
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ getCurrentSubject, removeCurrentSubjects }, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(Articlesgeneral);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Articlesgeneral);

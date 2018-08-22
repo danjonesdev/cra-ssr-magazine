@@ -19,21 +19,28 @@ class AnimatedHeading extends Component {
       default:
         return null;
     }
-  }
+  };
 
   loopChars = (title, styles) => {
-    let letters = []
+    let letters = [];
     for (let i = 0; i < title.length; i++) {
       letters.push(
-        <span key={i} className={`${styles}  animatedHeading__letter  animatedHeading__letter--${i}`}>{title.charAt(i)}</span>
+        <span
+          key={i}
+          className={`${styles}  animatedHeading__letter  animatedHeading__letter--${i}`}
+        >
+          {title.charAt(i)}
+        </span>
       );
     }
     return letters;
-  }
+  };
 
   render() {
     const { type, title, padding, styles, article } = this.props;
-    const wrapperStyles = article ? 'tal' : 'container-medium  mla  mra  tac  tal-md';
+    const wrapperStyles = article
+      ? 'tal'
+      : 'container-medium  mla  mra  tac  tal-md';
     return (
       <div className={`${wrapperStyles}  ${padding}`}>
         {this.heading(title, type)}

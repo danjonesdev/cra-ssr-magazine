@@ -1,16 +1,20 @@
-import React, {Component} from 'react';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
-import {frontloadConnect} from 'react-frontload';
+import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { frontloadConnect } from 'react-frontload';
 
 import Page from '../../components/page';
 import AnimatedHeading from '../../elements/animated-heading';
-import AuthorComponent from '../../components/author'
+import AuthorComponent from '../../components/author';
 import ArticlesGrid from '../../components/articles-grid';
 
-import {getCurrentSubject, removeCurrentSubject} from '../../../modules/author';
+import {
+  getCurrentSubject,
+  removeCurrentSubject,
+} from '../../../modules/author';
 
-const frontload = async props => await props.getCurrentSubject(props.match.params.id);
+const frontload = async props =>
+  await props.getCurrentSubject(props.match.params.id);
 
 class Author extends Component {
   componentWillUnmount() {
@@ -29,7 +33,12 @@ class Author extends Component {
 
     if (profile._id) {
       return (
-        <Page id="author" title={profile.title} description={profile.title} image={profile.mainImage}>
+        <Page
+          id="author"
+          title={profile.title}
+          description={profile.title}
+          image={profile.mainImage}
+        >
           <AnimatedHeading
             type="h1"
             title={profile.name}
@@ -37,10 +46,7 @@ class Author extends Component {
             styles="t-title  ttu  bold  f5"
           />
 
-          <AuthorComponent
-             profile={profile}
-             padding="pt4  mt2"
-            />
+          <AuthorComponent profile={profile} padding="pt4  mt2" />
 
           <ArticlesGrid
             items={profile.articles}
@@ -54,14 +60,25 @@ class Author extends Component {
   }
 }
 
-const mapStateToProps = state => ({currentProfile: state.author.currentProfile});
+const mapStateToProps = state => ({
+  currentProfile: state.author.currentProfile,
+});
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-  getCurrentSubject,
-  removeCurrentSubject
-}, dispatch);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      getCurrentSubject,
+      removeCurrentSubject,
+    },
+    dispatch
+  );
 
-export default connect(mapStateToProps, mapDispatchToProps)(frontloadConnect(frontload, {
-  onMount: true,
-  onUpdate: false
-})(Author));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(
+  frontloadConnect(frontload, {
+    onMount: true,
+    onUpdate: false,
+  })(Author)
+);

@@ -1,17 +1,21 @@
-import React, {Component} from 'react';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
-import {frontloadConnect} from 'react-frontload';
+import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { frontloadConnect } from 'react-frontload';
 
 import Page from '../../components/page';
-import MainImage from '../../components/article/main-image'
+import MainImage from '../../components/article/main-image';
 import AnimatedHeading from '../../elements/animated-heading';
-import ArticleSections from '../../components/article'
+import ArticleSections from '../../components/article';
 import ArticlesGeneral from '../../reusable-workers/articles-general';
 
-import {getCurrentSubject, removeCurrentSubject} from '../../../modules/article';
+import {
+  getCurrentSubject,
+  removeCurrentSubject,
+} from '../../../modules/article';
 
-const frontload = async props => await props.getCurrentSubject(props.match.params.id);
+const frontload = async props =>
+  await props.getCurrentSubject(props.match.params.id);
 
 class Article extends Component {
   componentWillUnmount() {
@@ -30,7 +34,12 @@ class Article extends Component {
 
     if (item._id) {
       return (
-        <Page id="article" title={item.title} description={item.description} image={item.mainImage}>
+        <Page
+          id="article"
+          title={item.title}
+          description={item.description}
+          image={item.mainImage}
+        >
           <MainImage
             mainImage={item.mainImage}
             alt={item.title}
@@ -45,12 +54,10 @@ class Article extends Component {
                   title={item.title}
                   padding="pt2  pb2"
                   styles="t-title  ttu  bold  f4"
-                  article={true}
+                  article
                 />
 
-                <ArticleSections
-                  body={item.body}
-                 />
+                <ArticleSections body={item.body} />
               </div>
               <div className="col-24  col-7-lg">
                 <p className="t-title  f5  black  pl2  pt2  pb2">Latest</p>
@@ -62,7 +69,9 @@ class Article extends Component {
                   padding="pt2  pb3"
                 />
 
-                <p className="t-title  f5  black  pl2  pt2  pb2">More from Dan</p>
+                <p className="t-title  f5  black  pl2  pt2  pb2">
+                  More from Dan
+                </p>
                 <ArticlesGeneral
                   {...this.props}
                   limitFrom={0}
@@ -80,14 +89,25 @@ class Article extends Component {
   }
 }
 
-const mapStateToProps = state => ({currentProfile: state.article.currentProfile});
+const mapStateToProps = state => ({
+  currentProfile: state.article.currentProfile,
+});
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-  getCurrentSubject,
-  removeCurrentSubject
-}, dispatch);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      getCurrentSubject,
+      removeCurrentSubject,
+    },
+    dispatch
+  );
 
-export default connect(mapStateToProps, mapDispatchToProps)(frontloadConnect(frontload, {
-  onMount: true,
-  onUpdate: false
-})(Article));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(
+  frontloadConnect(frontload, {
+    onMount: true,
+    onUpdate: false,
+  })(Article)
+);

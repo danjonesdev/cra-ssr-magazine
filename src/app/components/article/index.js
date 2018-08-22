@@ -8,10 +8,8 @@ import SpotifyEmbed from '../../components/article/spotify-embed';
 import YouTubeEmbed from '../../components/article/youtube-embed';
 import FacebookVideoEmbed from '../../components/article/facebook-video-embed';
 
-
 class ArticleSections extends Component {
   renderSections = (section, i) => {
-
     // para
     if (section._type === 'block' && !section.listsection) {
       return (
@@ -74,7 +72,7 @@ class ArticleSections extends Component {
         </div>
       );
     }
-  }
+  };
 
   render() {
     const { body } = this.props;
@@ -82,9 +80,7 @@ class ArticleSections extends Component {
 
     return (
       <React.Fragment>
-        {body.map((section, i) => (
-          this.renderSections(section, i)
-        ))}
+        {body.map((section, i) => this.renderSections(section, i))}
       </React.Fragment>
     );
   }

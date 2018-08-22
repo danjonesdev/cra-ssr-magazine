@@ -36,7 +36,7 @@ export default (req, res) => {
       '<div id="root"></div>',
       `<div id="root">${body}</div><script>window.__PRELOADED_STATE__ = ${state}</script>`
     );
-    data = data.replace('</body>', scripts.join('') + '</body>');
+    data = data.replace('</body>', `${scripts.join('')}</body>`);
 
     return data;
   };
@@ -97,7 +97,7 @@ export default (req, res) => {
         if (context.url) {
           // If context has a url property, then we need to handle a redirection in Redux Router
           res.writeHead(302, {
-            Location: context.url
+            Location: context.url,
           });
 
           res.end();
@@ -129,7 +129,7 @@ export default (req, res) => {
             meta: helmet.meta.toString(),
             body: routeMarkup,
             scripts: extraChunks,
-            state: JSON.stringify(store.getState()).replace(/</g, '\\u003c')
+            state: JSON.stringify(store.getState()).replace(/</g, '\\u003c'),
           });
 
           // We have all the final HTML, let's send it to the user already!

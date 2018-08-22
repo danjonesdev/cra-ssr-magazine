@@ -1,26 +1,26 @@
-import sanity from './sanity'
+import sanity from './sanity';
 
 export const AUTHOR = 'auth/AUTHOR';
 
 const initialState = {
-  currentProfile: {}
+  currentProfile: {},
 };
 
-export default(state = initialState, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case AUTHOR:
       return {
         ...state,
-        currentProfile: action.author
+        currentProfile: action.author,
       };
     default:
       return state;
   }
 };
 
-export const getCurrentSubject = id => dispatch => new Promise(resolve => {
-  const query =
-  `*[_type == "author" && slug.current == $id][0] {
+export const getCurrentSubject = id => dispatch =>
+  new Promise(resolve => {
+    const query = `*[_type == "author" && slug.current == $id][0] {
     ...,
     author->,
     "image": image.asset->url,
@@ -30,17 +30,18 @@ export const getCurrentSubject = id => dispatch => new Promise(resolve => {
     }
   }`;
 
-  const params = {
-    id: id
-  };
+    const params = {
+      id,
+    };
 
-  sanity.fetch(query, params).then(author => {
-    dispatch({type: AUTHOR, author});
-    resolve(author);
-  })
-});
+    sanity.fetch(query, params).then(author => {
+      dispatch({ type: AUTHOR, author });
+      resolve(author);
+    });
+  });
 
-export const removeCurrentSubject = () => dispatch => new Promise(resolve => {
-  dispatch({type: AUTHOR, author: {}});
-  resolve({});
-});
+export const removeCurrentSubject = () => dispatch =>
+  new Promise(resolve => {
+    dispatch({ type: AUTHOR, author: {} });
+    resolve({});
+  });

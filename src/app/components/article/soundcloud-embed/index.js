@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Iframe from 'react-iframe'
+import Iframe from 'react-iframe';
 
 class SoundCloudEmbed extends Component {
   render() {
@@ -15,7 +15,8 @@ class SoundCloudEmbed extends Component {
           className="myClassname"
           display="initial"
           position="relative"
-          allowFullScreen/>
+          allowFullScreen
+        />
       </div>
     );
   }

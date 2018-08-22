@@ -1,15 +1,19 @@
-import React, {Component} from 'react';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
-import {frontloadConnect} from 'react-frontload';
+import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { frontloadConnect } from 'react-frontload';
 
 import Page from '../../components/page';
 import AnimatedHeading from '../../elements/animated-heading';
 import ArticlesGrid from '../../components/articles-grid';
 
-import {getCurrentSubject, removeCurrentSubjects} from '../../../modules/category';
+import {
+  getCurrentSubject,
+  removeCurrentSubjects,
+} from '../../../modules/category';
 
-const frontload = async props => await props.getCurrentSubject(props.match.params.id);
+const frontload = async props =>
+  await props.getCurrentSubject(props.match.params.id);
 
 class Article extends Component {
   componentWillUnmount() {
@@ -28,7 +32,12 @@ class Article extends Component {
 
     if (category._id) {
       return (
-        <Page id={category.slug.current} title={category.title} description={category.description} image="{item.mainImage}">
+        <Page
+          id={category.slug.current}
+          title={category.title}
+          description={category.description}
+          image="{item.mainImage}"
+        >
           <AnimatedHeading
             type="h1"
             title={category.title}
@@ -36,11 +45,7 @@ class Article extends Component {
             styles="t-title  ttu  bold  f5"
           />
 
-          <ArticlesGrid
-            items={category.posts}
-            type="grid"
-            padding="pt4  pb2"
-          />
+          <ArticlesGrid items={category.posts} type="grid" padding="pt4  pb2" />
         </Page>
       );
     }
@@ -48,14 +53,25 @@ class Article extends Component {
   }
 }
 
-const mapStateToProps = state => ({currentProfiles: state.category.currentProfiles});
+const mapStateToProps = state => ({
+  currentProfiles: state.category.currentProfiles,
+});
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-  getCurrentSubject,
-  removeCurrentSubjects
-}, dispatch);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      getCurrentSubject,
+      removeCurrentSubjects,
+    },
+    dispatch
+  );
 
-export default connect(mapStateToProps, mapDispatchToProps)(frontloadConnect(frontload, {
-  onMount: true,
-  onUpdate: false
-})(Article));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(
+  frontloadConnect(frontload, {
+    onMount: true,
+    onUpdate: false,
+  })(Article)
+);

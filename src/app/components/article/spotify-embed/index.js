@@ -4,7 +4,7 @@ import SpotifyPlayer from 'react-spotify-player';
 class SpotifyEmbed extends Component {
   render() {
     const { spotifyEmbed } = this.props;
-    const size = { width: '100%', height: 120, };
+    const size = { width: '100%', height: 120 };
     const view = 'coverart'; // or 'coverart'
     const theme = 'black'; // or 'white'
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import AnimatedImage from '../../elements/animated-image'
+import AnimatedImage from '../../elements/animated-image';
 
 class ArticlesList extends Component {
   render() {
@@ -15,20 +15,30 @@ class ArticlesList extends Component {
             <article key={i} className="flex  flex-wrap  shadow2">
               <div className="col-6">
                 <figure>
-                  <Link className="link  db  pa2" to={`/article/${item.slug.current}`}>
-                    <AnimatedImage lazy={true} src={item.mainImage} alt={item.title} styles="trans-all-1  h1  w-100" />
+                  <Link
+                    className="link  db  pa2"
+                    to={`/article/${item.slug.current}`}
+                  >
+                    <AnimatedImage
+                      lazy
+                      src={item.mainImage}
+                      alt={item.title}
+                      styles="trans-all-1  h1  w-100"
+                    />
                   </Link>
                 </figure>
               </div>
 
               <div className="col-18  ph2  pt2">
                 <Link className="link" to={`/article/${item.slug.current}`}>
-                  <p className="t-title  f6  f5-md  black  pt1  pb2">{item.title}</p>
+                  <p className="t-title  f6  f5-md  black  pt1  pb2">
+                    {item.title}
+                  </p>
                 </Link>
               </div>
             </article>
           </div>
-          ))}
+        ))}
       </section>
     );
   }

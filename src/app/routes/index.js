@@ -7,37 +7,37 @@ import NotFound from './not-found';
 const Homepage = Loadable({
   loader: () => import(/* webpackChunkName: "homepage" */ './homepage'),
   loading: () => <p>TESSSSSSSSSSt</p>,
-  modules: ['homepage']
+  modules: ['homepage'],
 });
 
 const Category = Loadable({
   loader: () => import(/* webpackChunkName: "category" */ './category'),
   loading: () => <p>TESSSSSSSSSSt</p>,
-  modules: ['category']
+  modules: ['category'],
 });
 
 const About = Loadable({
   loader: () => import(/* webpackChunkName: "about" */ './about'),
   loading: () => <p>TESSSSSSSSSSt</p>,
-  modules: ['about']
+  modules: ['about'],
 });
 
 const Authors = Loadable({
   loader: () => import(/* webpackChunkName: "authors" */ './authors'),
   loading: () => <p>TESSSSSSSSSSt</p>,
-  modules: ['authors']
+  modules: ['authors'],
 });
 
 const Author = Loadable({
   loader: () => import(/* webpackChunkName: "author" */ './author'),
   loading: () => <p>TESSSSSSSSSSt</p>,
-  modules: ['author']
+  modules: ['author'],
 });
 
 const Article = Loadable({
   loader: () => import(/* webpackChunkName: "article" */ './article'),
   loading: () => <p>TESSSSSSSSSSt</p>,
-  modules: ['article']
+  modules: ['article'],
 });
 
 export default () => (

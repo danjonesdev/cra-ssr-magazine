@@ -3,11 +3,24 @@
   "homepage": "https://cra-ssr.herokuapp.com",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "concurrently --kill-others \"react-scripts start\" \"npm run watch-css\"",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "build": "react-scripts build",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix .",
+    "prettier-fix": "prettier --write src/**/*.{js,jsx}",
+    "eject": "react-scripts eject",
+    "serve": "NODE_ENV=production node ./server/index.js",
+    "buildserve": "npm run build && npm run serve"
+  },
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.2",
     "@sanity/client": "^0.132.5",
     "@sanity/image-url": "^0.132.5",
     "classnames": "^2.2.6",
+    "concurrently": "^3.6.1",
     "connected-react-router": "^4.3.0",
     "cookie-parser": "^1.4.3",
     "eslint": "^5.4.0",
@@ -42,31 +55,5 @@
     "react-youtube": "^7.6.0",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "eslint --fix",
-      "prettier --config .prettierrc --write",
-      "git add"
-    ],
-    "src/**/*.{css}": [
-      "stylelint --config=.stylelintrc --fix",
-      "prettier --config .prettierrc --write",
-      "git add"
-    ]
-  },
-  "scripts": {
-    "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test:lint:js": "eslint --ext=js --ext=jsx .",
-    "eject": "react-scripts eject",
-    "serve": "NODE_ENV=production node ./server/index.js",
-    "buildserve": "npm run build && npm run serve"
-  },
-  "devDependencies": {
-    "stylelint": "^9.5.0",
-    "stylelint-config-standard": "^18.2.0"
   }
 }

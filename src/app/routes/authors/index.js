@@ -1,12 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-import Page from '../../components/page'
+import Page from '../../components/page';
 import AnimatedHeading from '../../elements/animated-heading';
 import AuthorsWorker from '../../reusable-workers/authors';
 
 class Authors extends Component {
   render() {
-
     return (
       <Page id="authors" title="Authors">
         <AnimatedHeading
@@ -16,10 +15,7 @@ class Authors extends Component {
           styles="t-title  ttu  bold  f5"
         />
 
-        <AuthorsWorker
-          {...this.props}
-          padding="pt4  pb2"
-        />
+        <AuthorsWorker {...this.props} padding="pt4  pb2" />
       </Page>
     );
   }

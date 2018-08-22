@@ -7,10 +7,7 @@ class YouTubeEmbed extends Component {
 
     return (
       <div className="w-80  mla  mra">
-        <YouTube
-          videoId={youTubeEmbed}
-          className="w-100  h8"
-        />
+        <YouTube videoId={youTubeEmbed} className="w-100  h8" />
       </div>
     );
   }

@@ -2,10 +2,10 @@ import { combineReducers } from 'redux';
 
 import auth from './auth';
 import article from './article';
-import {default as articlesLatest} from './articles-latest';
-import {default as articlesGeneral} from './articles-general';
-import {default as category} from './category';
-import {default as authors} from './authors';
+import { default as articlesLatest } from './articles-latest';
+import { default as articlesGeneral } from './articles-general';
+import { default as category } from './category';
+import { default as authors } from './authors';
 import author from './author';
 
 export default combineReducers({
@@ -15,5 +15,5 @@ export default combineReducers({
   articlesGeneral,
   authors,
   category,
-  author
+  author,
 });
