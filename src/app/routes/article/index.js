@@ -50,11 +50,11 @@ class Article extends Component {
             <div className="flex  flex-wrap  justify-center">
               <div className="col-18  col-20-sm  col-18-md  col-15-lg  pr5-md">
                 <AnimatedHeading
-                  type="h1"
+                  headingType="h1"
                   title={item.title}
-                  padding="pt2  pb2"
                   styles="t-title  ttu  bold  f4"
-                  article
+                  container={false}
+                  padding="pt2  pb2"
                 />
 
                 <ArticleSections body={item.body} />

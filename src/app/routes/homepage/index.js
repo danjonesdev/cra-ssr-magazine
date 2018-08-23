@@ -10,10 +10,11 @@ class Homepage extends Component {
     return (
       <Page id="home" title="Home">
         <AnimatedHeading
-          type="h1"
+          headingType="h1"
           title="Home"
-          padding="pt4  mt2"
           styles="t-title  ttu  bold  f5"
+          container={true}
+          padding="pt4  mt2"
         />
 
         <ArticlesGeneral

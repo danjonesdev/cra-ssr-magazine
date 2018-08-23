@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import LazyLoad from 'react-lazyload';
 
 class AnimatedHeading extends Component {
-  heading = (title, type) => {
-    switch (type) {
+  heading = (title, headingType) => {
+    switch (headingType) {
       case 'h1':
         return <h1 className="dn">{title}</h1>;
       case 'h2':
@@ -37,19 +37,33 @@ class AnimatedHeading extends Component {
   };
 
   render() {
-    const { type, title, padding, styles, article } = this.props;
-    const wrapperStyles = article
-      ? 'tal'
-      : 'container-medium  mla  mra  tac  tal-md';
-    return (
-      <div className={`${wrapperStyles}  ${padding}`}>
-        {this.heading(title, type)}
+    const { headingType, title, styles, container, padding } = this.props;
 
-        <LazyLoad height={100} offset={-100} once>
-          {this.loopChars(title, styles)}
-        </LazyLoad>
-      </div>
-    );
+    if (container) {
+      return (
+        <div className={`container-medium  mla  mra  tac  tal-md ${padding}`}>
+          <div className="flex">
+            <div className="col-12  ph4">
+              {this.heading(title, headingType)}
+
+              <LazyLoad height={100} offset={-100} once>
+                {this.loopChars(title, styles)}
+              </LazyLoad>
+            </div>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div className={padding}>
+          {this.heading(title, headingType)}
+
+          <LazyLoad height={100} offset={-100} once>
+            {this.loopChars(title, styles)}
+          </LazyLoad>
+        </div>
+      );
+    }
   }
 }
 
