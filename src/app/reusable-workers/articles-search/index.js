@@ -25,11 +25,13 @@ class ArticlesSearch extends Component {
   }
 
   shouldComponentUpdate(nextProps) {
-    if (nextProps.match.path !== this.props.match.path) {
+    console.log('ne');
+    console.log(nextProps);
+    if (nextProps.match.params.id !== this.props.match.params.id) {
       this.props.getCurrentSubject({
         limitFrom: this.props.limitFrom,
         limitTo: this.props.limitTo,
-        id: this.props.match.params.id,
+        id: nextProps.match.params.id,
       });
     }
     return true;

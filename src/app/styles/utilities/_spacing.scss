@@ -1,14 +1,28 @@
 // margin
 
-.mla { margin-left: auto; }
-.mra { margin-right: auto; }
+.mla {
+  margin-left: auto;
+}
+.mra {
+  margin-right: auto;
+}
 
 @each $i, $value in $spacings {
-  .ma#{$i} { margin: $value; }
-  .mt#{$i} { margin-top: $value; }
-  .mb#{$i} { margin-bottom: $value; }
-  .ml#{$i} { margin-left: $value; }
-  .mr#{$i} { margin-right: $value; }
+  .ma#{$i} {
+    margin: $value;
+  }
+  .mt#{$i} {
+    margin-top: $value;
+  }
+  .mb#{$i} {
+    margin-bottom: $value;
+  }
+  .ml#{$i} {
+    margin-left: $value;
+  }
+  .mr#{$i} {
+    margin-right: $value;
+  }
 
   .mv#{$i} {
     margin-top: $value;
@@ -25,11 +39,21 @@
   $infix: breakpoint-infix($modifier, $grid-breakpoints);
   @include breakpoint-up($modifier, $grid-breakpoints) {
     @each $i, $value in $spacings {
-      .ma#{$i}-#{$infix} { margin: $value; }
-      .mt#{$i}-#{$infix} { margin-top: $value; }
-      .mb#{$i}-#{$infix} { margin-bottom: $value; }
-      .ml#{$i}-#{$infix} { margin-left: $value; }
-      .mr#{$i}-#{$infix} { margin-right: $value; }
+      .ma#{$i}-#{$infix} {
+        margin: $value;
+      }
+      .mt#{$i}-#{$infix} {
+        margin-top: $value;
+      }
+      .mb#{$i}-#{$infix} {
+        margin-bottom: $value;
+      }
+      .ml#{$i}-#{$infix} {
+        margin-left: $value;
+      }
+      .mr#{$i}-#{$infix} {
+        margin-right: $value;
+      }
 
       .mv#{$i}-#{$infix} {
         margin-top: $value;
@@ -46,14 +70,26 @@
 
 // padding
 
-.pb-100 { padding-bottom: 100%; }
+.pb-100 {
+  padding-bottom: 100%;
+}
 
 @each $i, $value in $spacings {
-  .pa#{$i} { padding: $value; }
-  .pt#{$i} { padding-top: $value; }
-  .pb#{$i} { padding-bottom: $value; }
-  .pl#{$i} { padding-left: $value; }
-  .pr#{$i} { padding-right: $value; }
+  .pa#{$i} {
+    padding: $value;
+  }
+  .pt#{$i} {
+    padding-top: $value;
+  }
+  .pb#{$i} {
+    padding-bottom: $value;
+  }
+  .pl#{$i} {
+    padding-left: $value;
+  }
+  .pr#{$i} {
+    padding-right: $value;
+  }
 
   .pv#{$i} {
     padding-top: $value;
@@ -70,11 +106,21 @@
   $infix: breakpoint-infix($modifier, $grid-breakpoints);
   @include breakpoint-up($modifier, $grid-breakpoints) {
     @each $i, $value in $spacings {
-      .pa#{$i}-#{$infix} { padding: $value; }
-      .pt#{$i}-#{$infix} { padding-top: $value; }
-      .pb#{$i}-#{$infix} { padding-bottom: $value; }
-      .pl#{$i}-#{$infix} { padding-left: $value; }
-      .pr#{$i}-#{$infix} { padding-right: $value; }
+      .pa#{$i}-#{$infix} {
+        padding: $value;
+      }
+      .pt#{$i}-#{$infix} {
+        padding-top: $value;
+      }
+      .pb#{$i}-#{$infix} {
+        padding-bottom: $value;
+      }
+      .pl#{$i}-#{$infix} {
+        padding-left: $value;
+      }
+      .pr#{$i}-#{$infix} {
+        padding-right: $value;
+      }
 
       .pv#{$i}-#{$infix} {
         padding-top: $value;

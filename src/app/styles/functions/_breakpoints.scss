@@ -4,5 +4,5 @@
 }
 
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @return "#{$name}";
+  @return '#{$name}';
 }

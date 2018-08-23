@@ -1,3 +1,5 @@
 @each $color, $hex in $colors {
-  .bc-#{$color} { border-color: $hex; }
+  .bc-#{$color} {
+    border-color: $hex;
+  }
 }

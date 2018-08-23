@@ -93,6 +93,7 @@ class Header extends Component {
               })}
             </ul>
           </nav>
+          <SearchInput containerStyles="nav__desktop__search" elemStyles="" onSearch={this.toggleMobileNav} />
         </header>
 
         {/* Mobile */}

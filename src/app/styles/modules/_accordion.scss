@@ -1,9 +1,7 @@
 .accordion-header {
   background-color: palette(almost-white);
   cursor: pointer;
-  transition:
-    color 0.2s ease-in,
-    background-color 0.2s ease-in;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
 }
 
 .accordion-item.is-active .accordion-header {
@@ -14,9 +12,7 @@
 .accordion-reveal {
   height: 0;
   opacity: 0;
-  transition:
-    height 0.2s ease-in,
-    opacity 0.2s ease-in;
+  transition: height 0.2s ease-in, opacity 0.2s ease-in;
 }
 
 .accordion-item.is-active .accordion-reveal {
@@ -30,9 +26,7 @@
 }
 
 .accordion-item.is-active .accordion-indicator {
-  transform:
-    rotate(180deg)
-    translateY(50%);
+  transform: rotate(180deg) translateY(50%);
 }
 
 .accordion-item.is-active .accordion-indicator path {

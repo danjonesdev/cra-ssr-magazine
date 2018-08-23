@@ -27,9 +27,8 @@
   max-width: 1500px;
 }
 
-
-[class^="col"],
-[class*=" col"] {
+[class^='col'],
+[class*=' col'] {
   flex-grow: 1;
   // flex-shrink: 0;
   flex-basis: auto;

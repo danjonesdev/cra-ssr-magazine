@@ -13,7 +13,7 @@ class Search extends Component {
           headingType="h1"
           title="Search"
           styles="t-title  ttu  bold  f5"
-          container={true}
+          container
           padding="pt4  mt2"
         />
 

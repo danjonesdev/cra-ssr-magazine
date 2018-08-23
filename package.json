@@ -8,9 +8,9 @@
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "build": "react-scripts build",
     "build-css": "node-sass-chokidar src/ -o src/",
-    "lint": "eslint .",
-    "lint-fix": "eslint --fix .",
-    "prettier-fix": "prettier --write src/**/*.{js,jsx}",
+    "lint": "eslint src/**/*",
+    "lint-fix": "eslint --fix src/**/*",
+    "prettier-fix": "prettier --write src/**/*",
     "eject": "react-scripts eject",
     "serve": "NODE_ENV=production node ./server/index.js",
     "buildserve": "npm run build && npm run serve"

@@ -15,21 +15,17 @@ $colors: (
   light-grey: #aaaaaa,
   white: #ffffff,
   red: #ff4136,
-  blue: #0000ff
+  blue: #0000ff,
 );
 
 // Breakpoints
-
 $columns: 24;
-
 $grid-breakpoints: (
   sm: 650px,
   md: 950px,
-  lg: 1250px
+  lg: 1250px,
 );
-
 // Spacings
-
 $spacings: (
   0: 0,
   1: 0.25rem,
@@ -38,11 +34,9 @@ $spacings: (
   4: 2rem,
   5: 4rem,
   6: 8rem,
-  7: 16rem
+  7: 16rem,
 );
-
 // Heights
-
 $heights: (
   0: 0.5rem,
   1: 3rem,
@@ -56,11 +50,9 @@ $heights: (
   9: 16rem,
   10: 17.5rem,
   11: 19rem,
-  12: 20.5rem
+  12: 20.5rem,
 );
-
 // Widths
-
 $max-widths: (
   0: none,
   1: 1rem,
@@ -71,11 +63,9 @@ $max-widths: (
   6: 32rem,
   7: 48rem,
   8: 64rem,
-  9: 96rem
+  9: 96rem,
 );
-
 // Easings
-
 $easings: (
   easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53),
   easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19),
@@ -100,5 +90,5 @@ $easings: (
   easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95),
   easeInOutExpo: cubic-bezier(1, 0, 0, 1),
   easeInOutCirc: cubic-bezier(0.785, 0.135, 0.15, 0.86),
-  easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55)
+  easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55),
 );

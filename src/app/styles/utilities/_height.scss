@@ -1,12 +1,16 @@
 @each $i, $value in $heights {
-  .h#{$i} { height: $value; }
+  .h#{$i} {
+    height: $value;
+  }
 }
 
 @each $modifier, $breakpoint in $grid-breakpoints {
   $infix: breakpoint-infix($modifier, $grid-breakpoints);
   @include breakpoint-up($modifier, $grid-breakpoints) {
     @each $i, $value in $heights {
-      .h#{$i}-#{$infix} { height: $value; }
+      .h#{$i}-#{$infix} {
+        height: $value;
+      }
     }
   }
 }

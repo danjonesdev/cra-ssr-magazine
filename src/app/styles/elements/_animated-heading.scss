@@ -4,8 +4,8 @@
 
 @for $i from 0 through 100 {
   .animatedHeading__letter--#{$i} {
-      animation: animatedHeading 0s ease-in-out both;
-      animation-delay: $i * 0.1s;
+    animation: animatedHeading 0s ease-in-out both;
+    animation-delay: $i * 0.1s;
   }
 }
 

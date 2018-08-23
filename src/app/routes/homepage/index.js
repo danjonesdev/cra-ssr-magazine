@@ -13,7 +13,7 @@ class Homepage extends Component {
           headingType="h1"
           title="Home"
           styles="t-title  ttu  bold  f5"
-          container={true}
+          container
           padding="pt4  mt2"
         />
 

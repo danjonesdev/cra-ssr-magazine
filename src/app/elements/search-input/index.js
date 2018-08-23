@@ -34,10 +34,12 @@ class SearchInput extends Component {
   };
 
   render() {
+    const { containerStyles } = this.props;
+
     return (
       <React.Fragment>
         <form
-          className="searchInput__form"
+          className={containerStyles}
           action="#"
           onSubmit={this.submitForm}
         >
