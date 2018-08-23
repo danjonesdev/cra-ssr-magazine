@@ -20,12 +20,14 @@ export const getCurrentSubject = props => dispatch =>
   new Promise(resolve => {
     const params = {
       limit: `${props.limitFrom}..${props.limitTo}`,
-      id: `${props.id}*`,
+      id: `*${props.id}*`,
     };
 
     console.log(params.id);
 
-    const query = `*[_type == "post" && title match $id] | order(publishedAt desc) [${params.limit}] {
+    const query = `*[_type == "post" && title match $id] | order(publishedAt desc) [${
+      params.limit
+    }] {
     ...,
     author->,
     category->,

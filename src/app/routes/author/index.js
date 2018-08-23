@@ -38,7 +38,6 @@ class Author extends Component {
           description={profile.title}
           image={profile.mainImage}
         >
-
           <AuthorComponent profile={profile} padding="pt4  mt2" />
 
           <ArticlesGrid

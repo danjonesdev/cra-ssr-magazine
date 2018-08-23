@@ -12,14 +12,14 @@ class Author extends Component {
     return (
       <section className={`container-small  mla  mra  ${padding}`}>
         <div className="flex  flex-wrap  ph3">
-        <div className="col-24  col-6-sm  col-5-md  pb4  pb0-sm">
-          <AnimatedImage
-            lazy
-            src={profile.image}
-            alt={profile.name}
-            styles="trans-all-1  w4  br-100  center"
-          />
-        </div>
+          <div className="col-24  col-6-sm  col-5-md  pb4  pb0-sm">
+            <AnimatedImage
+              lazy
+              src={profile.image}
+              alt={profile.name}
+              styles="trans-all-1  w4  br-100  center"
+            />
+          </div>
           <div className="col-24  col-18-sm  col-19-md  flex  flex-column  justify-center  pb4  pb0-sm">
             <AnimatedHeading
               headingType="h1"

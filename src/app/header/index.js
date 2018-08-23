@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
+import SearchInput from '../elements/search-input';
 import logo from '../assets/logo-small.png';
 import { ArrowRight } from '../assets/svg';
 
@@ -111,11 +112,7 @@ class Header extends Component {
           </div>
 
           <nav className={navMobileClass}>
-            <input
-              className="nav__mobile__search  t-title  f5  light-grey  mt3  ml3  w-70  bb  bc-light-grey  pr3  pv2"
-              type="search"
-              placeholder="Search by keyword"
-            />
+            <SearchInput onSearch={this.toggleMobileNav} />
             <div
               onClick={this.toggleMobileNav}
               className="abs  header__menuClose"
