@@ -40,6 +40,12 @@ const Article = Loadable({
   modules: ['article'],
 });
 
+const Search = Loadable({
+  loader: () => import(/* webpackChunkName: "search" */ './search'),
+  loading: () => <p>TESSSSSSSSSSt</p>,
+  modules: ['search'],
+});
+
 export default () => (
   <Switch>
     <Route exact path="/" component={Homepage} />
@@ -48,6 +54,7 @@ export default () => (
     <Route exact path="/authors" component={Authors} />
     <Route exact path="/author/:id" component={Author} />
     <Route exact path="/article/:id" component={Article} />
+    <Route exact path="/search/:id" component={Search} />
     <Route component={NotFound} />
   </Switch>
 );
