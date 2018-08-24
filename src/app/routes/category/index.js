@@ -6,9 +6,22 @@ import AnimatedHeading from '../../elements/animated-heading';
 import ArticlesCategory from '../../reusable-workers/articles-category';
 
 class Homepage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      workerTItle: '',
+    };
+  }
+
+  handleWorkerData = (data) => {
+    console.log('yo');
+    console.log(data)
+    this.setState({ workerTItle: data.title })
+  }
+
   render() {
     return (
-      <Page id="home" title="Home">
+      <Page id="home" title={this.state.workerTItle}>
         <AnimatedHeading
           headingType="h1"
           title="Category"
@@ -23,6 +36,7 @@ class Homepage extends Component {
           limitTo={24}
           type="grid"
           padding="pt2  pb3"
+          getWorkerData={this.handleWorkerData}
         />
       </Page>
     );

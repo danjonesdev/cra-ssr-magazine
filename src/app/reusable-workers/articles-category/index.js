@@ -27,6 +27,7 @@ class ArticlesCategory extends Component {
 
   render() {
     const category = this.props.currentProfiles;
+    this.props.getWorkerData(category)
 
     if (category._id) {
       return (
