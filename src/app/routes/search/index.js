@@ -7,11 +7,13 @@ import ArticlesSearch from '../../reusable-workers/articles-search';
 
 class Search extends Component {
   render() {
+    const searchQuery = this.props.match.params.id;
+
     return (
       <Page id="home" title="Home">
         <AnimatedHeading
           headingType="h1"
-          title="Search"
+          title={`Search reuslts for '${searchQuery}'`}
           styles="t-title  ttu  bold  f5"
           container
           padding="pt4  mt2"
